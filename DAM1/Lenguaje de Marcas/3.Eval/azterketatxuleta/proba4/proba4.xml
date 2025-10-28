@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<empresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="proba4.xsd" id="1001">
+    <nombre>TechNova Solutions</nombre>
+    <direccion>
+        <calle>Innovación 45</calle>
+        <codigoPostal>28000</codigoPostal>
+        <ciudad>Madrid</ciudad>
+        <provincia>Madrid</provincia>
+    </direccion>
+    <empleados>
+        <empleado id="E001" activo="true">
+            <nombre>Ana Martínez</nombre>
+            <telefono tipo="movil" num="666123456"/>
+            <telefono tipo="fijo" num="911234567"/>
+            <email>ana.martinez@technova.com</email>
+            <fechaIncorporacion>2021-09-15</fechaIncorporacion>
+            <departamento>Desarrollo</departamento>
+        </empleado>
+        <empleado id="E002" activo="false">
+            <nombre>Jorge Pérez</nombre>
+            <telefono tipo="movil" num="666987654"/>
+            <email>jorge.perez@technova.com</email>
+            <fechaIncorporacion>2020-02-20</fechaIncorporacion>
+            <departamento>Marketing</departamento>
+        </empleado>
+    </empleados>
+</empresa>

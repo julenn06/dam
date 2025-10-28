@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SettingApp</string>
+
+    <string name="dark_mode">Modo oscuro</string>
+    <string name="dark_mode_description">Activa el modo oscuro para un cambio visual</string>
+    <string name="bluetooth">Activar Bluetooth</string>
+    <string name="bluethooth_description">Conecta perifericos sin cable</string>
+    <string name="volume">Subir el volumen</string>
+    <string name="vibration">Vibrar en las llamadas</string>
+</resources>

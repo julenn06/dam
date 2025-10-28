@@ -1,0 +1,6 @@
+[
+    {
+        "merged": "com.example.settingapp-mergeDebugResources-38:/layout/activity_settings.xml",
+        "source": "com.example.settingapp-main-41:/layout/activity_settings.xml"
+    }
+]

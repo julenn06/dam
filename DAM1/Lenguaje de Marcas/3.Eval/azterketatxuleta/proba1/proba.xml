@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Instituto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="proba.xsd" nombre="Instituto Ejemplar">
+    <Profesores>
+        <Profesor id="P1">
+            <Nombre>María López</Nombre>
+            <Asignatura>Matemáticas</Asignatura>
+        </Profesor>
+        <Profesor id="P2">
+            <Nombre>Carlos Pérez</Nombre>
+            <Asignatura>Historia</Asignatura>
+        </Profesor>
+    </Profesores>
+    <Alumnos>
+        <Alumno id="A1">
+            <Nombre>Ana García</Nombre>
+            <Edad>16</Edad>
+            <Curso>1º Bachillerato</Curso>
+            <Tutor ref="P1"/>
+        </Alumno>
+        <Alumno id="A2">
+            <Nombre>David Martínez</Nombre>
+            <Edad>17</Edad>
+            <Curso>2º Bachillerato</Curso>
+            <Tutor ref="P2"/>
+        </Alumno>
+    </Alumnos>
+</Instituto>

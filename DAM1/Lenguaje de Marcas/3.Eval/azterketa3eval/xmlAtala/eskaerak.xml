@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<eskaerak xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="eskaerak.xsd">
+    <eskaera>
+        <bezeroa>
+            <izena>Jon Gartzie</izena>
+            <emaila>jon@adibidea.eus</emaila>
+        </bezeroa>
+        <produktuak>
+            <produktua>
+                <izena>Kamiseta</izena>
+                <kantitatea>2</kantitatea>
+                <prezioa>19.99</prezioa>
+            </produktua>
+            <produktua>
+                <izena>Praka</izena>
+                <kantitatea>1</kantitatea>
+                <prezioa>39.99</prezioa>
+            </produktua>
+        </produktuak>
+    </eskaera>
+</eskaerak>

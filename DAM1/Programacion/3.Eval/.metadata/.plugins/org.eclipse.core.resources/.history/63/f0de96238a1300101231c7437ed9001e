@@ -1,0 +1,7 @@
+package modeloa;
+
+abstract class Langileak {
+
+	protected int id;
+	
+}

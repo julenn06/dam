@@ -1,0 +1,1 @@
+Zure datuak ondo erregistratu dira

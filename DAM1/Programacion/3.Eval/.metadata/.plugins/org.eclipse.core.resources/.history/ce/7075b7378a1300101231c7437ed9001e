@@ -1,0 +1,10 @@
+package modeloa;
+
+public class Mendekoak extends Langileak {
+
+	public Mendekoak(int id, String izena) {
+		super(id, izena);
+		// TODO Auto-generated constructor stub
+	}
+
+}

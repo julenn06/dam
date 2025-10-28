@@ -1,0 +1,11 @@
+package modeloa;
+
+public class Mendekoak extends Langileak {
+	
+	private Date sartzeData;
+
+	public Mendekoak(int id, String izena) {
+		super(id, izena);
+	}
+
+}

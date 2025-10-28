@@ -1,0 +1,11 @@
+INDEX VERSION 1.134+E:\DAM\Entornos de Desarrollo\2. Eval\.metadata\.plugins\org.eclipse.jdt.core
+2752174375.index
+1095180843.index
+67822670.index
+787237476.index
+175261284.index
+634120462.index
+1865797976.index
+256376321.index
+1105066187.index
+505890950.index

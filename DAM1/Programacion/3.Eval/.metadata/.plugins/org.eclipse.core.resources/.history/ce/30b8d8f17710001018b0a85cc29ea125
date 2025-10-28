@@ -1,0 +1,11 @@
+package azterketaTxuleta;
+
+public class Ikasleak extends Pertsonak {
+
+	@Override
+	double dirua() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

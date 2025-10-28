@@ -1,0 +1,631 @@
+Estilo 1: Columna sencilla (vertical)
+
+body {
+    background-color: #f0f0f0;
+}
+
+h1 {
+    text-align: center;
+}
+
+#kontenedorea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.txartela {
+    width: 300px;
+    margin: 15px 0;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+}
+
+.txartela img {
+    width: 100%;
+    border-radius: 8px;
+    height: auto;
+}
+
+---
+
+Estilo 2: Fila con tarjetas grandes y sombras
+
+body {
+    background-color: #e6f7ff;
+}
+
+h1 {
+    text-align: center;
+}
+
+#kontenedorea {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.txartela {
+    width: 250px;
+    margin: 20px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.txartela:hover {
+    transform: scale(1.05);
+}
+
+.txartela img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+---
+
+Estilo 3: Fondo oscuro y tarjetas brillantes
+
+body {
+    background-color: #1c1c1c;
+    color: #f5f5f5;
+}
+
+h1 {
+    text-align: center;
+    color: #f5f5f5;
+}
+
+#kontenedorea {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.txartela {
+    background: #2e2e2e;
+    border: 1px solid #555;
+    border-radius: 12px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+}
+
+.txartela img {
+    width: 90%;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+---
+
+Estilo 4: Minimalista blanco-gris
+
+body {
+    background-color: #ffffff;
+}
+
+h1 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+#kontenedorea {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.txartela {
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    width: 180px;
+    margin: 15px;
+    text-align: center;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.txartela img {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+
+---
+
+Estilo 5: Tarjetas circulares (imágenes redondas)
+
+body {
+    background-color: #ffe4e1;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+#kontenedorea {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.txartela {
+    background: #fff;
+    border: 2px solid #ff6f61;
+    border-radius: 20px;
+    width: 220px;
+    text-align: center;
+    margin: 15px;
+    padding: 10px;
+}
+
+.txartela img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 10px auto;
+}
+
+---
+
+Estilo 6: Estilo "Instagram" (grid cuadrado)
+
+body {
+    background: linear-gradient(to right, #f9f9f9, #e0e0e0);
+}
+
+h1 {
+    text-align: center;
+}
+
+#kontenedorea {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.txartela {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.txartela:hover {
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+}
+
+.txartela img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+---
+
+Estilo 7: Estilo "Glassmorphism" (tarjetas transparentes)
+
+body {
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+#kontenedorea {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.txartela {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 20px;
+    width: 200px;
+    margin: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    color: white;
+}
+
+.txartela img {
+    width: 90%;
+    border-radius: 10px;
+}
+
+---
+
+Estilo 8: Tarjetas "Timeline" (columnas alternadas)
+
+body {
+    background-color: #f2f2f2;
+}
+
+h1 {
+    text-align: center;
+}
+
+#kontenedorea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.txartela {
+    width: 60%;
+    background: white;
+    border-radius: 10px;
+    margin: 15px 0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+
+.txartela:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.txartela img {
+    width: 40%;
+    border-radius: 10px;
+    margin: 0 20px;
+}
+
+---
+
+Estilo 9: Tarjetas con borde grueso
+
+body {
+    background-color: #fafafa;
+}
+
+h1 {
+    text-align: center;
+}
+
+#kontenedorea {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.txartela {
+    border: 4px solid #333;
+    border-radius: 15px;
+    background: white;
+    width: 220px;
+    text-align: center;
+    margin: 15px;
+    padding: 10px;
+}
+
+.txartela img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+---
+
+Estilo 10: Estilo elegante (negro, dorado)
+
+body {
+    background-color: #000;
+    color: #ffd700;
+}
+
+h1 {
+    text-align: center;
+    color: #ffd700;
+    font-family: 'Georgia', serif;
+}
+
+#kontenedorea {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.txartela {
+    background: #111;
+    border: 2px solid #ffd700;
+    border-radius: 12px;
+    width: 220px;
+    margin: 15px;
+    text-align: center;
+    padding: 10px;
+}
+
+.txartela img {
+    width: 90%;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+---
+
+Estilo 11: Retro colores pastel
+
+body {
+    background-color: #ffe5d9;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    text-align: center;
+    color: #ff7f50;
+}
+
+#kontenedorea {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.txartela {
+    background-color: #fcd5ce;
+    border: 2px dashed #ffb5a7;
+    border-radius: 12px;
+    width: 220px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.txartela img {
+    width: 90%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+---
+
+Estilo 12: Neón moderno
+
+body {
+    background-color: #0f0f0f;
+    color: #39ff14;
+}
+
+h1 {
+    text-align: center;
+    color: #39ff14;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#kontenedorea {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.txartela {
+    background: #1a1a1a;
+    border: 2px solid #39ff14;
+    border-radius: 8px;
+    width: 200px;
+    margin: 15px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
+}
+
+.txartela img {
+    width: 90%;
+    border-radius: 8px;
+}
+
+---
+
+Estilo 13: Acuarela suave
+
+body {
+    background: linear-gradient(#d4fc79, #96e6a1);
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+#kontenedorea {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.txartela {
+    background: #ffffffcc;
+    border: 1px solid #c8e6c9;
+    border-radius: 20px;
+    width: 240px;
+    margin: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+.txartela img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+---
+
+Estilo 14: Gamer oscuro y verde
+
+body {
+    background: #121212;
+    font-family: 'Press Start 2P', cursive;
+    color: #00ff00;
+}
+
+h1 {
+    text-align: center;
+    color: #00ff00;
+}
+
+#kontenedorea {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.txartela {
+    background: #1f1f1f;
+    border: 3px solid #00ff00;
+    border-radius: 8px;
+    width: 200px;
+    margin: 15px;
+    text-align: center;
+    padding: 10px;
+}
+
+.txartela img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+---
+
+Estilo 15: Tarjetas 3D (con profundidad)
+
+body {
+    background: #eef2f3;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+#kontenedorea {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.txartela {
+    background: white;
+    border-radius: 15px;
+    width: 220px;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.1),
+                -8px -8px 20px rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
+}
+
+.txartela:hover {
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.3);
+}
+
+.txartela img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+---
+
+Estilo 16: Vertical elegante con fondo claro
+
+body {
+    background-color: #fafafa;
+    font-family: 'Arial', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+#kontenedorea {
+    display: flex;
+    flex-direction: column; /* Vertical */
+    align-items: center;
+    padding: 20px;
+}
+
+.txartela {
+    width: 350px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.txartela img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+---
+
+Estilo 17: Vertical minimalista oscuro
+
+body {
+    background-color: #121212;
+    font-family: 'Verdana', sans-serif;
+    color: #e0e0e0;
+}
+
+h1 {
+    text-align: center;
+    color: #e0e0e0;
+}
+
+#kontenedorea {
+    display: flex;
+    flex-direction: column; /* Vertical */
+    align-items: center;
+    margin: 30px;
+}
+
+.txartela {
+    width: 320px;
+    margin: 20px 0;
+    padding: 18px;
+    background-color: #1f1f1f;
+    border: 1px solid #333;
+    border-radius: 12px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.txartela:hover {
+    background-color: #292929;
+}
+
+.txartela img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}

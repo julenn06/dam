@@ -1,0 +1,35 @@
+package azterketaTxuleta;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		int aukera;
+		boolean jarraitu = true;
+		do {
+		System.out.println("Zer sartu nahi duzu?");
+		System.out.println("1. Ikaslea");
+		System.out.println("2. Irakaslea");
+		System.out.println("3.Itxi");
+		aukera = sc.nextInt();
+
+		switch (aukera) {
+
+		case 1:
+		case 2:
+		case 3:
+			System.out.println("Irten...");
+			jarraitu = false;
+			break;
+		default:
+			System.out.println("Aukera okerra");
+		}
+		} while(jarraitu == true)
+		sc.close();
+	}
+
+}

@@ -1,0 +1,29 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id False
+id Next
+id Previus
+id True
+id main
+id navLayout
+id texto
+id trueFalseLayout
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_round
+string False
+string True
+string app_name
+string pregunta1
+string pregunta2
+string pregunta3
+string pregunta4
+string pregunta5
+style Base.Theme.Ariketa01
+style Theme.Ariketa01
+xml backup_rules
+xml data_extraction_rules

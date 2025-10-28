@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>XML fitxategi bat irakurri</h1>
+    <h5>XML fitxategi bat irakurri eta bere edukia pantailan erakutsi.</h5>
+
+    <div id="liburuak"></div>
+
+    <script>
+        const xmlString = `
+        <liburuak>
+            <liburua>
+                <izenburua>El Señor de los Anillos</izenburua>
+
+            </liburua>
+            <liburua>
+                <izenburua>The Da Vinci Code</izenburua>
+
+            </liburua>
+        </liburuak>`;
+
+        let parser = new DOMParser();
+        let xmlDoc = parser.parseFromString(xmlString, "text/xml");
+
+        for (let i = 0; i < xmlDoc.getElementsByTagName("liburua").length; i++) {
+
+            let izenburua = xmlDoc.getElementsByTagName("izenburua")[i].textContent;
+
+
+            let liburuaDiv = document.createElement("div");
+
+            liburuaDiv.innerHTML = `
+                <ul>
+                    <li><b>Izenburua:</b> ${izenburua}</li>
+                </ul>
+            `;
+            document.getElementById("liburuak").appendChild(liburuaDiv);
+        }
+    </script>
+</body>
+
+</html>

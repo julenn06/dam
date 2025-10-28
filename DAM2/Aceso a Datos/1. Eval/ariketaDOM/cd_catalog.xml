@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><catalog>
+   <cd numero="1">
+      <title>Empire Burlesque</title>
+      <artist>Bob Dylan</artist>
+      <country>EE.UU.</country>
+      <company>Columbia</company>
+      <price>10.90</price>
+      <year>1985</year>
+   </cd>
+   <cd numero="2">
+      <title>Hide your heart</title>
+      <artist>Bonnie Tyler</artist>
+      <country>UK</country>
+      <company>CBS Records</company>
+      <price>9.90</price>
+      <year>1988</year>
+   </cd>
+   <cd numero="3">
+      <title>Nuevo Disco Prueba</title>
+      <artist>Chumacho Band</artist>
+      <country>España</country>
+      <company>Independiente</company>
+      <price>5.99</price>
+      <year>2025</year>
+   </cd>
+</catalog>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="universidad">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="facultades">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="facultad">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nombre" type="xs:string" />
+                                        <xs:element name="decanato" type="xs:string" />
+                                        <xs:element name="alumnos">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="alumno" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="nombre"
+                                                                    type="xs:string" />
+                                                                <xs:element name="direccion">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="calle"
+                                                                                type="xs:string" />
+                                                                            <xs:element
+                                                                                name="numero"
+                                                                                type="xs:string" />
+                                                                            <xs:element
+                                                                                name="ciudad"
+                                                                                type="xs:string" />
+                                                                            <xs:element
+                                                                                name="provincia"
+                                                                                type="xs:string" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="telefono">
+                                                                    <xs:complexType>
+                                                                        <xs:attribute name="num"
+                                                                            type="xs:integer"
+                                                                            use="required" />
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="email"
+                                                                    type="xs:string" />
+                                                            </xs:sequence>
+                                                            <xs:attribute name="nan" use="required" />
+                                                            <xs:attribute name="nacimiento"
+                                                                type="xs:date" use="required" />
+                                                            <xs:attribute name="becario"
+                                                                type="xs:boolean" use="required" />
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="id" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="nombre" use="required" />
+            <xs:attribute name="id" type="xs:integer" use="required" />
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

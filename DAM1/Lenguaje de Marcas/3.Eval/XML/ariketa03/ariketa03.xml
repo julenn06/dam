@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datuak faktura="123">
+
+    <bezero_datuak>
+        <txantrea>txantrea liburutegia</txantrea>
+        <cif>33111222A</cif>
+        <telefonoa>333999444</telefonoa>
+    </bezero_datuak>
+
+    <xehetasunak mota="Liburua">
+        <artikulua>AW7</artikulua>
+        <kantitatea>1</kantitatea>
+        <prezioa>21&#8364;</prezioa>
+    </xehetasunak>
+</datuak>

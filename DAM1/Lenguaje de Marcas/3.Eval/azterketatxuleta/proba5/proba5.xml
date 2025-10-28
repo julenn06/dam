@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<universidad xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="proba5.xsd" nombre="Universidad Internacional de la Innovación" id="2002">
+    <facultades>
+        <facultad id="F01">
+            <nombre>Ingeniería</nombre>
+            <decanato>Dr. Elena López</decanato>
+            <alumnos>
+                <alumno nan="12345678A" nacimiento="2001-06-15" becario="true">
+                    <nombre>Mario Sánchez</nombre>
+                    <direccion>
+                        <calle>Carrera 12</calle>
+                        <numero>101</numero>
+                        <ciudad>Valencia</ciudad>
+                        <provincia>Valencia</provincia>
+                    </direccion>
+                    <telefono num="600123123"/>
+                    <email>mario.sanchez@uniinnovacion.edu</email>
+                </alumno>
+                <alumno nan="87654321B" nacimiento="2002-10-05" becario="false">
+                    <nombre>Laura Gómez</nombre>
+                    <direccion>
+                        <calle>Libertad 8</calle>
+                        <numero>58</numero>
+                        <ciudad>Barcelona</ciudad>
+                        <provincia>Barcelona</provincia>
+                    </direccion>
+                    <telefono num="600321321"/>
+                    <email>laura.gomez@uniinnovacion.edu</email>
+                </alumno>
+            </alumnos>
+        </facultad>
+    </facultades>
+</universidad>

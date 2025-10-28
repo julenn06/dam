@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Erronka1/gymapp-5b215-firebase-adminsdk-fbsvc-45e59edebc.json&apos; to &apos;serviceAccountKey.json&apos;" description="Rename resource &apos;gymapp-5b215-firebase-adminsdk-fbsvc-45e59edebc.json&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="gymapp-5b215-firebase-adminsdk-fbsvc-45e59edebc.json" name="serviceAccountKey.json" stamp="1760972094185" updateReferences="true"/>
+</session>

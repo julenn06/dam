@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "com.example.ariketa_5.app-mergeDebugResources-34:/layout/item_categoria.xml",
+        "source": "com.example.ariketa_5.app-main-37:/layout/item_categoria.xml"
+    },
+    {
+        "merged": "com.example.ariketa_5.app-mergeDebugResources-34:/layout/item_tarea.xml",
+        "source": "com.example.ariketa_5.app-main-37:/layout/item_tarea.xml"
+    },
+    {
+        "merged": "com.example.ariketa_5.app-mergeDebugResources-34:/layout/dialog_tarea.xml",
+        "source": "com.example.ariketa_5.app-main-37:/layout/dialog_tarea.xml"
+    },
+    {
+        "merged": "com.example.ariketa_5.app-mergeDebugResources-34:/layout/activity_todo.xml",
+        "source": "com.example.ariketa_5.app-main-37:/layout/activity_todo.xml"
+    }
+]

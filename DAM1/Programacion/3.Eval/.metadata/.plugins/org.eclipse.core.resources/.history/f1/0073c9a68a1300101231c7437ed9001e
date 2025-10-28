@@ -1,0 +1,14 @@
+package modeloa;
+
+import java.sql.Date;
+
+public class Mendekoak extends Langileak {
+	
+	private Date sartzeData;
+	private String kontratuMota;
+
+	public Mendekoak(int id, String izena) {
+		super(id, izena);
+	}
+
+}

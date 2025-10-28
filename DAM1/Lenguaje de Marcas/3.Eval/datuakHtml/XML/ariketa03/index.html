@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    fieldset {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+</style>
+
+<body>
+
+    <h1>XML fitxategi bat irakurri</h1>
+    <h5>XML fitxategi bat irakurri eta bere edukia pantailan erakutsi.</h5>
+
+    <fieldset>
+        <legend>Liburuak</legend>
+        <div id="liburuak"></div>
+    </fieldset>
+
+    <script>
+        const xmlString = `
+        <liburuak>
+            <liburua>
+                <isbn>978-84-376-0494-7</isbn>
+                <izenburua>El Señor de los Anillos</izenburua>
+                <autorea>J.R.R. Tolkien</autorea>
+                <urtea>1954</urtea>
+            </liburua>
+            <liburua>
+                <isbn>978-0-7432-7356-5</isbn>
+                <izenburua>The Da Vinci Code</izenburua>
+                <autorea>Dan Brown</autorea>
+                <urtea>2003</urtea>
+            </liburua>
+        </liburuak>`;
+
+        let parser = new DOMParser();
+        let xmlDoc = parser.parseFromString(xmlString, "text/xml");
+
+        for (let i = 0; i < xmlDoc.getElementsByTagName("liburua").length; i++) {
+
+            let isbn = xmlDoc.getElementsByTagName("isbn")[i].textContent;
+            let izenburua = xmlDoc.getElementsByTagName("izenburua")[i].textContent;
+            let autorea = xmlDoc.getElementsByTagName("autorea")[i].textContent;
+            let urtea = xmlDoc.getElementsByTagName("urtea")[i].textContent;
+
+            let liburuaDiv = document.createElement("div");
+
+            liburuaDiv.innerHTML = `
+                <ul>
+                    <li><b>ISBN:</b> ${isbn}</li>
+                    <li><b>Izenburua:</b> ${izenburua}</li>
+                    <li><b>Autorea:</b> ${autorea}</li>
+                    <li><b>Urtea:</b> ${urtea}</li>
+                </ul>
+            `;
+            document.getElementById("liburuak").appendChild(liburuaDiv);
+        }
+    </script>
+</body>
+
+</html>

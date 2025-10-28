@@ -1,0 +1,433 @@
+<!-- PruebaSwagger Frontend - Interfaz completa para la API -->
+
+<div class="app-container">
+  <!-- Header -->
+  <header class="header">
+    <h1>🚀 {{ title() }}</h1>
+    <p>Interfaz completa para probar todos los métodos de tu API Swagger</p>
+  </header>
+
+  <!-- Loading indicator -->
+  <div class="loading-container" *ngIf="loading()">
+    <div class="spinner"></div>
+    <p>Procesando solicitud...</p>
+  </div>
+
+  <!-- Main content -->
+  <main class="main-content" *ngIf="!loading()">
+
+    <!-- Sección de Mensajes -->
+    <section class="section">
+      <h2>📝 Mensajes</h2>
+      <div class="card">
+        <h3>Saludo Simple</h3>
+        <button class="btn btn-primary" (click)="getHello()">
+          Obtener Mensaje de Saludo
+        </button>
+      </div>
+
+      <div class="card">
+        <h3>Echo Personalizado</h3>
+        <div class="form-group">
+          <input
+            type="text"
+            [(ngModel)]="mensajeForm.nombre"
+            placeholder="Ingresa tu nombre"
+            class="form-control"
+          />
+          <button class="btn btn-primary" (click)="postEcho()">
+            Enviar Echo
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Matemáticas -->
+    <section class="section">
+      <h2>🔢 Operaciones Matemáticas</h2>
+
+      <!-- Operaciones binarias -->
+      <div class="card">
+        <h3>Operaciones con dos números</h3>
+        <div class="form-group">
+          <div class="input-row">
+            <input
+              type="number"
+              [(ngModel)]="matematicasForm.a"
+              placeholder="Número A"
+              class="form-control"
+            />
+            <input
+              type="number"
+              [(ngModel)]="matematicasForm.b"
+              placeholder="Número B"
+              class="form-control"
+            />
+          </div>
+          <div class="button-grid">
+            <button class="btn btn-success" (click)="sumar()">➕ Sumar</button>
+            <button class="btn btn-warning" (click)="restar()">➖ Restar</button>
+            <button class="btn btn-info" (click)="multiplicar()">✖️ Multiplicar</button>
+            <button class="btn btn-danger" (click)="dividir()">➗ Dividir</button>
+            <button class="btn btn-secondary" (click)="potencia()">🔺 Potencia</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Operaciones unarias -->
+      <div class="card">
+        <h3>Operaciones con un número</h3>
+        <div class="form-group">
+          <input
+            type="number"
+            [(ngModel)]="matematicasForm.n"
+            placeholder="Número N"
+            class="form-control"
+          />
+          <div class="button-grid">
+            <button class="btn btn-primary" (click)="factorial()">❗ Factorial</button>
+            <button class="btn btn-success" (click)="esPrimo()">🔍 Es Primo</button>
+            <button class="btn btn-info" (click)="fibonacci()">🌀 Fibonacci</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Cadenas -->
+    <section class="section">
+      <h2>🔤 Manipulación de Cadenas</h2>
+      <div class="card">
+        <h3>Operaciones con texto</h3>
+        <div class="form-group">
+          <input
+            type="text"
+            [(ngModel)]="cadenaForm.texto"
+            placeholder="Ingresa un texto"
+            class="form-control"
+          />
+          <div class="button-grid">
+            <button class="btn btn-primary" (click)="invertirCadena()">🔄 Invertir</button>
+            <button class="btn btn-success" (click)="esPalindromo()">🔍 Es Palíndromo</button>
+            <button class="btn btn-info" (click)="contarVocales()">🔤 Contar Vocales</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resultados -->
+    <section class="section" *ngIf="resultado() || error()">
+      <h2>📊 Resultados</h2>
+
+      <!-- Error -->
+      <div class="card error-card" *ngIf="error()">
+        <h3>❌ Error</h3>
+        <p class="error-message">{{ error() }}</p>
+      </div>
+
+      <!-- Resultado exitoso -->
+      <div class="card success-card" *ngIf="resultado()">
+        <h3>✅ Resultado</h3>
+        <div class="result-content">
+          <p class="result-text">{{ resultado() }}</p>
+        </div>
+      </div>
+
+      <button class="btn btn-secondary" (click)="limpiarResultados()">
+        🗑️ Limpiar Resultados
+      </button>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>🔗 Conectado a: <code>http://localhost:5000/api/MetodosService</code></p>
+    <p>Asegúrate de que tu API esté funcionando y con CORS habilitado</p>
+  </footer>
+</div>
+
+<style>
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 10px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.header p {
+  margin: 10px 0 0 0;
+  opacity: 0.9;
+}
+
+.loading-container {
+  text-align: center;
+  padding: 40px;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 20px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.section h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #555;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+}
+
+.form-control {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  flex: 1;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+}
+
+.btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-primary { background: #667eea; color: white; }
+.btn-success { background: #28a745; color: white; }
+.btn-warning { background: #ffc107; color: #212529; }
+.btn-info { background: #17a2b8; color: white; }
+.btn-danger { background: #dc3545; color: white; }
+.btn-secondary { background: #6c757d; color: white; }
+
+.error-card {
+  border-left: 4px solid #dc3545;
+  background: #f8d7da;
+}
+
+.success-card {
+  border-left: 4px solid #28a745;
+  background: #d4edda;
+}
+
+.error-message {
+  color: #721c24;
+  font-weight: 500;
+}
+
+.result-content pre {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 4px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  font-size: 13px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  color: #666;
+}
+
+.footer code {
+  background: #e9ecef;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+}
+
+@media (max-width: 768px) {
+  .input-row {
+    flex-direction: column;
+  }
+
+  .button-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+}
+</style>
+
+<style>
+  .content {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 3rem;
+  }
+
+  .content h1 {
+    margin-top: 1.75rem;
+  }
+
+  .content p {
+    margin-top: 1.5rem;
+  }
+
+  .divider {
+    width: 1px;
+    background: var(--red-to-pink-to-purple-vertical-gradient);
+    margin-inline: 0.5rem;
+  }
+
+  .pill-group {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+
+  .pill {
+    display: flex;
+    align-items: center;
+    --pill-accent: var(--bright-blue);
+    background: color-mix(in srgb, var(--pill-accent) 5%, transparent);
+    color: var(--pill-accent);
+    padding-inline: 0.75rem;
+    padding-block: 0.375rem;
+    border-radius: 2.75rem;
+    border: 0;
+    transition: background 0.3s ease;
+    font-family: var(--inter-font);
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.4rem;
+    letter-spacing: -0.00875rem;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .pill:hover {
+    background: color-mix(in srgb, var(--pill-accent) 15%, transparent);
+  }
+
+  .pill-group .pill:nth-child(6n + 1) {
+    --pill-accent: var(--bright-blue);
+  }
+  .pill-group .pill:nth-child(6n + 2) {
+    --pill-accent: var(--electric-violet);
+  }
+  .pill-group .pill:nth-child(6n + 3) {
+    --pill-accent: var(--french-violet);
+  }
+
+  .pill-group .pill:nth-child(6n + 4),
+  .pill-group .pill:nth-child(6n + 5),
+  .pill-group .pill:nth-child(6n + 6) {
+    --pill-accent: var(--hot-red);
+  }
+
+  .pill-group svg {
+    margin-inline-start: 0.25rem;
+  }
+
+  .social-links {
+    display: flex;
+    align-items: center;
+    gap: 0.73rem;
+    margin-top: 1.5rem;
+  }
+
+  .social-links path {
+    transition: fill 0.3s ease;
+    fill: var(--gray-400);
+  }
+
+  .social-links a:hover svg path {
+    fill: var(--gray-900);
+  }
+
+  @media screen and (max-width: 650px) {
+    .content {
+      flex-direction: column;
+      width: max-content;
+    }
+
+    .divider {
+      height: 1px;
+      width: 100%;
+      background: var(--red-to-pink-to-purple-horizontal-gradient);
+      margin-block: 1.5rem;
+    }
+  }
+</style>

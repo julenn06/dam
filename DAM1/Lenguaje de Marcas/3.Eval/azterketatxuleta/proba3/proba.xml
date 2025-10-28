@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Instituto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="proba.xsd" nombre="Instituto Ejemplar" direccion="Calle Falsa 123" ciudad="Madrid" telefono="912345678">
+    <Profesores>
+        <Profesor id="P1" dni="12345678A" email="maria.lopez@institutoejemplar.es" telefono="600111222" fechaNacimiento="1980-04-12">
+            <Nombre>María López</Nombre>
+            <Asignatura>Matemáticas</Asignatura>
+            <Departamento>Ciencias</Departamento>
+        </Profesor>
+        <Profesor id="P2" dni="87654321B" email="carlos.perez@institutoejemplar.es" telefono="600333444" fechaNacimiento="1975-09-30">
+            <Nombre>Carlos Pérez</Nombre>
+            <Asignatura>Historia</Asignatura>
+            <Departamento>Humanidades</Departamento>
+        </Profesor>
+    </Profesores>
+    <Alumnos>
+        <Alumno id="A1" dni="11223344C" email="ana.garcia@alu.institutoejemplar.es" telefono="600555666" fechaNacimiento="2007-06-20" direccion="Av. Siempre Viva 742">
+            <Nombre>Ana García</Nombre>
+            <Edad>16</Edad>
+            <Curso>1º Bachillerato</Curso>
+            <Grupo>A</Grupo>
+            <Tutor ref="P1"/>
+        </Alumno>
+        <Alumno id="A2" dni="44332211D" email="david.martinez@alu.institutoejemplar.es" telefono="600777888" fechaNacimiento="2006-11-15" direccion="Calle Sol 55">
+            <Nombre>David Martínez</Nombre>
+            <Edad>17</Edad>
+            <Curso>2º Bachillerato</Curso>
+            <Grupo>B</Grupo>
+            <Tutor ref="P2"/>
+        </Alumno>
+        <Alumno id="A3" dni="55667788E" email="lucia.sanchez@alu.institutoejemplar.es" telefono="600999000" fechaNacimiento="2007-02-28" direccion="Plaza Luna 10">
+            <Nombre>Lucía Sánchez</Nombre>
+            <Edad>16</Edad>
+            <Curso>1º Bachillerato</Curso>
+            <Grupo>A</Grupo>
+            <Tutor ref="P1"/>
+        </Alumno>
+    </Alumnos>
+</Instituto>

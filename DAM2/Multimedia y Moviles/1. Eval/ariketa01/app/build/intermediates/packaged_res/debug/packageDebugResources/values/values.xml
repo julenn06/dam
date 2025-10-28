@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="False">Respuesta incorrecta</string>
+    <string name="True">Bien hecho</string>
+    <string name="app_name">ariketa01</string>
+    <string name="pregunta1">AAA?</string>
+    <string name="pregunta2">BBB?</string>
+    <string name="pregunta3">CCC?</string>
+    <string name="pregunta4">DDD?</string>
+    <string name="pregunta5">EEE?</string>
+    <style name="Base.Theme.Ariketa01" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.Ariketa01" parent="Base.Theme.Ariketa01"/>
+</resources>

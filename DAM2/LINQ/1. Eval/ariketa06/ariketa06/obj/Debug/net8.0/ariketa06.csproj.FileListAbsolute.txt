@@ -1,0 +1,14 @@
+C:\Users\in1dm3-d\source\repos\ariketa06\ariketa06\bin\Debug\net8.0\ariketa06.exe
+C:\Users\in1dm3-d\source\repos\ariketa06\ariketa06\bin\Debug\net8.0\ariketa06.deps.json
+C:\Users\in1dm3-d\source\repos\ariketa06\ariketa06\bin\Debug\net8.0\ariketa06.runtimeconfig.json
+C:\Users\in1dm3-d\source\repos\ariketa06\ariketa06\bin\Debug\net8.0\ariketa06.dll
+C:\Users\in1dm3-d\source\repos\ariketa06\ariketa06\bin\Debug\net8.0\ariketa06.pdb
+C:\Users\in1dm3-d\source\repos\ariketa06\ariketa06\obj\Debug\net8.0\ariketa06.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\in1dm3-d\source\repos\ariketa06\ariketa06\obj\Debug\net8.0\ariketa06.AssemblyInfoInputs.cache
+C:\Users\in1dm3-d\source\repos\ariketa06\ariketa06\obj\Debug\net8.0\ariketa06.AssemblyInfo.cs
+C:\Users\in1dm3-d\source\repos\ariketa06\ariketa06\obj\Debug\net8.0\ariketa06.csproj.CoreCompileInputs.cache
+C:\Users\in1dm3-d\source\repos\ariketa06\ariketa06\obj\Debug\net8.0\ariketa06.dll
+C:\Users\in1dm3-d\source\repos\ariketa06\ariketa06\obj\Debug\net8.0\refint\ariketa06.dll
+C:\Users\in1dm3-d\source\repos\ariketa06\ariketa06\obj\Debug\net8.0\ariketa06.pdb
+C:\Users\in1dm3-d\source\repos\ariketa06\ariketa06\obj\Debug\net8.0\ariketa06.genruntimeconfig.cache
+C:\Users\in1dm3-d\source\repos\ariketa06\ariketa06\obj\Debug\net8.0\ref\ariketa06.dll

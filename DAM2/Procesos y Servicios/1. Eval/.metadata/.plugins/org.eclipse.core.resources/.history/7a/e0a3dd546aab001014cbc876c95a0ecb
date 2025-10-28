@@ -1,0 +1,118 @@
+package view;
+
+import java.awt.EventQueue;
+import java.awt.Image;
+import java.awt.Toolkit;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
+
+import com.google.cloud.firestore.Firestore;
+
+import controller.Controller;
+import controller.DBConnection;
+
+public class LoginFrame extends JFrame {
+
+	private static final long serialVersionUID = 1L;
+	private static final int LOGO_ZABALERA = 250;
+	private static final int LOGO_ALTUERA = 180;
+
+	private final JPanel contentPane;
+	private final JTextField textFieldUser;
+	private final JPasswordField passwordField;
+	private final Controller controller;
+	private final DBConnection dbConnection;
+	private final Firestore db;
+
+	public static void main(String[] args) {
+		EventQueue.invokeLater(() -> {
+			try {
+				Controller controller = new Controller();
+				LoginFrame frame = new LoginFrame(controller);
+				frame.setVisible(true);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		});
+	}
+
+	public LoginFrame(Controller controller) {
+		this.controller = controller;
+		this.dbConnection = controller.getDbConnection();
+		this.db = controller.getDb();
+		
+		hasieratuKomponenteak();
+	}
+
+	private void hasieratuKomponenteak() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage("img/logo.png"));
+		setTitle("LOGIN");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		setLocationRelativeTo(null);
+
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+
+		JLabel labelUser = new JLabel("Email:");
+		labelUser.setBounds(40, 54, 90, 14);
+		contentPane.add(labelUser);
+
+		JLabel labelPassword = new JLabel("Pasahitza:");
+		labelPassword.setBounds(40, 110, 87, 14);
+		contentPane.add(labelPassword);
+
+		textFieldUser = new JTextField();
+		textFieldUser.setBounds(40, 79, 136, 20);
+		textFieldUser.setColumns(10);
+		contentPane.add(textFieldUser);
+
+		passwordField = new JPasswordField();
+		passwordField.setBounds(40, 135, 136, 20);
+		contentPane.add(passwordField);
+
+		JLabel lblLoginLogo = new JLabel("");
+		lblLoginLogo.setIcon(sortuLogo());
+		lblLoginLogo.setHorizontalAlignment(SwingConstants.CENTER);
+		lblLoginLogo.setBounds(207, 22, 217, 180);
+		contentPane.add(lblLoginLogo);
+
+		JButton btnLogin = new JButton("Sartu");
+		btnLogin.addActionListener(e -> loginEkintza());
+		btnLogin.setBounds(59, 211, 89, 23);
+		contentPane.add(btnLogin);
+
+		JButton btnRegistro = new JButton("Registratu");
+		btnRegistro.setBounds(255, 213, 105, 23);
+		btnRegistro.addActionListener(e -> registratuEkintza());
+		contentPane.add(btnRegistro);
+	}
+
+	private ImageIcon sortuLogo() {
+		ImageIcon originalIcon = new ImageIcon(getClass().getResource("/img/logo.png"));
+		Image scaledImage = originalIcon.getImage().getScaledInstance(LOGO_ZABALERA, LOGO_ALTUERA, Image.SCALE_SMOOTH);
+		return new ImageIcon(scaledImage);
+	}
+
+	private void loginEkintza() {
+		Boolean ondo = dbConnection.kudeatuSaioa(textFieldUser, passwordField);
+		if (Boolean.TRUE.equals(ondo)) {
+			dispose();
+		}
+	}
+
+	private void registratuEkintza() {
+		RegisterDialog registerDialog = new RegisterDialog(this, controller);
+		registerDialog.setVisible(true);
+	}
+}

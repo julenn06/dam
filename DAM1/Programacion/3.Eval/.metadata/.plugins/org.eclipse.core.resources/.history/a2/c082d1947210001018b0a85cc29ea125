@@ -1,0 +1,13 @@
+package azterketaTxuleta;
+
+public class Adina extends Exception {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public Adina(String mezua) {
+		super(mezua);
+	}
+}

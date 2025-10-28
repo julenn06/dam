@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>R= <input type="number" name="zenbakia" id="zenbakia" /></h2>
+    <p>
+        <label>
+            <input type="radio" name="calculo" id="perimetroa" value="perimetroa"> Perimetroa
+        </label>
+        <label>
+            <input type="radio" name="calculo" id="azalera" value="azalera"> Azalera
+        </label>
+    </p>
+
+
+    <input type="button" name="emaitza" id="emaitza" value="Emaitza" onclick=emaitzaKalkulatu()>
+    <label>
+        <input type="text" readonly>
+    </label>
+
+
+
+    <script>
+        function emaitzaKalkulatu() {
+            let radioa = document.getElementById('zenbakia');
+            let perimetroa = document.getElementById('perimetroa');
+            let azalera = document.getElementById('azalera');
+
+            if (perimetroa == true) {
+
+            }
+        }
+    </script>
+</body>
+
+</html>

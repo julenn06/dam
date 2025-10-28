@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:simpleType name="idBalioak">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="10000"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="faktura">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="f_data" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="saltzailea" minOccurs="1" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="izena" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="idBalioak" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="bezeroa" minOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="izena" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="helbidea" minOccurs="1" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="kalea" type="xs:string"/>
+                                        <xs:element name="kp" type="xs:string"/>
+                                        <xs:element name="herria" type="xs:string"/>
+                                        <xs:element name="probintzia" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="telefonoak" minOccurs="0" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="telefonoa" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:attribute name="num" type="xs:string" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="idBalioak" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="artikulua" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="deskribapena" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="prezioa" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="kant" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="idBalioak" use="required"/>
+                        <xs:attribute name="bez" type="xs:integer" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="deskontua">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:decimal">
+                            <xs:minInclusive value="0"/>
+                            <xs:maxInclusive value="100"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="id" type="idBalioak" use="required"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

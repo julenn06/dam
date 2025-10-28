@@ -1,0 +1,18 @@
+package azterketaTxuleta;
+
+public class Ikasleak extends Pertsonak {
+
+	public Ikasleak(String izena, String abizena, int adina) {
+		super(izena, abizena, adina);
+	}
+
+	@Override
+	double dirua() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	
+
+
+}

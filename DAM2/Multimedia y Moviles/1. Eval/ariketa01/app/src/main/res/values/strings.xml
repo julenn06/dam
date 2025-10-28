@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ariketa01</string>
+    <string name="False">Respuesta incorrecta</string>
+    <string name="True">Bien hecho</string>
+    <string name="pregunta1">AAA?</string>
+    <string name="pregunta2">BBB?</string>
+    <string name="pregunta3">CCC?</string>
+    <string name="pregunta4">DDD?</string>
+    <string name="pregunta5">EEE?</string>
+</resources>

@@ -1,0 +1,36 @@
+{
+  "datuak": {
+    "$": {
+      "faktura": "123"
+    },
+    "bezero_datuak": [
+      {
+        "txantrea": [
+          "txantrea liburutegia"
+        ],
+        "cif": [
+          "33111222A"
+        ],
+        "telefonoa": [
+          "333999444"
+        ]
+      }
+    ],
+    "xehetasunak": [
+      {
+        "$": {
+          "mota": "Liburua"
+        },
+        "artikulua": [
+          "AW7"
+        ],
+        "kantitatea": [
+          "1"
+        ],
+        "prezioa": [
+          "21€"
+        ]
+      }
+    ]
+  }
+}

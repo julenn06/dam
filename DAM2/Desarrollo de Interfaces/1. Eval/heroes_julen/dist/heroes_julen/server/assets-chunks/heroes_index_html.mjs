@@ -1,0 +1,249 @@
+export default `<!DOCTYPE html><html lang="es"><head>
+  <meta charset="utf-8">
+  <title>Heroes App</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="stylesheet" href="styles.css"><style ng-app-id="ng">
+
+.heroes-header[_ngcontent-ng-c3748466491] {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.heroes-header[_ngcontent-ng-c3748466491]   h1[_ngcontent-ng-c3748466491] {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+.top-heroes-container[_ngcontent-ng-c3748466491] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.all-heroes-list[_ngcontent-ng-c3748466491] {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 600px;
+  display: grid;
+  gap: 1rem;
+}
+.all-heroes-list[_ngcontent-ng-c3748466491]   li[_ngcontent-ng-c3748466491] {
+  display: flex;
+  align-items: center;
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(38, 50, 56, 0.1);
+}
+.all-heroes-list[_ngcontent-ng-c3748466491]   li[_ngcontent-ng-c3748466491]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(38, 50, 56, 0.15);
+  border-color: var(--color-secondary);
+}
+.hero-id[_ngcontent-ng-c3748466491] {
+  background:
+    linear-gradient(
+      135deg,
+      var(--color-primary),
+      var(--color-secondary));
+  color: var(--color-text-light);
+  width: 50px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.all-hero-btn[_ngcontent-ng-c3748466491] {
+  flex: 1;
+  padding: 16px 20px;
+  color: var(--color-text);
+  background: transparent;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-align: left;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.all-hero-btn[_ngcontent-ng-c3748466491]:hover {
+  background: var(--color-muted);
+  color: var(--color-primary);
+}
+.modal-backdrop[_ngcontent-ng-c3748466491] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.3s ease;
+}
+.modal[_ngcontent-ng-c3748466491] {
+  background: var(--color-surface);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  min-width: 400px;
+  max-width: 90vw;
+  animation: slideIn 0.3s ease;
+}
+.modal[_ngcontent-ng-c3748466491]   h3[_ngcontent-ng-c3748466491] {
+  margin-bottom: 1.5rem;
+  color: var(--color-primary);
+  text-align: center;
+  font-size: 1.5rem;
+}
+.modal[_ngcontent-ng-c3748466491]   label[_ngcontent-ng-c3748466491] {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+.modal[_ngcontent-ng-c3748466491]   input[_ngcontent-ng-c3748466491] {
+  width: 100%;
+  padding: 12px 16px;
+  margin-top: 6px;
+  border: 2px solid var(--color-border);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+.modal[_ngcontent-ng-c3748466491]   input[_ngcontent-ng-c3748466491]:focus {
+  outline: none;
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0 3px rgba(69, 90, 100, 0.1);
+}
+.modal-actions[_ngcontent-ng-c3748466491] {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+.modal-actions[_ngcontent-ng-c3748466491]   button[_ngcontent-ng-c3748466491] {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+.modal-actions[_ngcontent-ng-c3748466491]   button[type=submit][_ngcontent-ng-c3748466491] {
+  background: var(--color-primary);
+  color: var(--color-text-light);
+}
+.modal-actions[_ngcontent-ng-c3748466491]   button[type=submit][_ngcontent-ng-c3748466491]:hover:not(:disabled) {
+  background: var(--color-secondary);
+  transform: translateY(-2px);
+}
+.modal-actions[_ngcontent-ng-c3748466491]   button[type=submit][_ngcontent-ng-c3748466491]:disabled {
+  background: var(--color-border);
+  color: var(--color-text);
+  cursor: not-allowed;
+  transform: none;
+}
+.modal-actions[_ngcontent-ng-c3748466491]   button[type=button][_ngcontent-ng-c3748466491] {
+  background: var(--color-border);
+  color: var(--color-text);
+}
+.modal-actions[_ngcontent-ng-c3748466491]   button[type=button][_ngcontent-ng-c3748466491]:hover {
+  background: var(--color-accent);
+  color: var(--color-text-light);
+}
+.all-hero-btn[_ngcontent-ng-c3748466491] {
+  flex: 1;
+  background: #455a64;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  padding: 12px 16px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: left;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.all-hero-btn[_ngcontent-ng-c3748466491]:hover {
+  background: #263238;
+}
+.hero-id[_ngcontent-ng-c3748466491] {
+  display: inline-block;
+  background: #455a64;
+  color: #fff;
+  width: 36px;
+  text-align: center;
+  font-weight: bold;
+  padding: 12px 0;
+  border-radius: 0;
+  margin-right: 8px;
+}
+.all-hero-btn[_ngcontent-ng-c3748466491] {
+  color: #263238;
+  background: transparent;
+  font-weight: 600;
+  text-decoration: none;
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 0;
+  font-size: 1.1rem;
+  text-align: left;
+  transition: background 0.2s;
+}
+.all-hero-btn[_ngcontent-ng-c3748466491]:hover {
+  background: #ececec;
+  color: #263238;
+}
+.delete-btn[_ngcontent-ng-c3748466491] {
+  background: white;
+  color: #263238;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  width: 36px;
+  height: 100%;
+  cursor: pointer;
+  transition: background 0.2s;
+  border-radius: 5px;
+}
+.delete-btn[_ngcontent-ng-c3748466491]:hover {
+  background: #ff5252;
+  color: #fff;
+}
+.delete-btn[_ngcontent-ng-c3748466491]:active {
+  background: #ff1744;
+}
+.add-hero-btn[_ngcontent-ng-c3748466491] {
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 16px;
+}
+.add-hero-btn[_ngcontent-ng-c3748466491]:hover {
+  background: #388e3c;
+}
+/*# sourceMappingURL=/heroes-page.css.map */</style></head>
+
+<body><!--nghm--><script type="text/javascript" id="ng-event-dispatch-contract">(()=>{function p(t,n,r,o,e,i,f,m){return{eventType:t,event:n,targetElement:r,eic:o,timeStamp:e,eia:i,eirp:f,eiack:m}}function u(t){let n=[],r=e=>{n.push(e)};return{c:t,q:n,et:[],etc:[],d:r,h:e=>{r(p(e.type,e,e.target,t,Date.now()))}}}function s(t,n,r){for(let o=0;o<n.length;o++){let e=n[o];(r?t.etc:t.et).push(e),t.c.addEventListener(e,t.h,r)}}function c(t,n,r,o,e=window){let i=u(t);e._ejsas||(e._ejsas={}),e._ejsas[n]=i,s(i,r),s(i,o,!0)}window.__jsaction_bootstrap=c;})();
+</script><script>window.__jsaction_bootstrap(document.body,"ng",["click"],[]);</script>
+  <app-root ng-version="20.3.4" ngh="1" ng-server-context="ssg"><router-outlet></router-outlet><app-heroes-page _nghost-ng-c3748466491="" ngh="0"><div _ngcontent-ng-c3748466491="" class="heroes-page-container page-container"><div _ngcontent-ng-c3748466491="" class="heroes-header"><h1 _ngcontent-ng-c3748466491="">Heroes Kudeaketa</h1><button _ngcontent-ng-c3748466491="" class="add-hero-btn btn btn-accent" jsaction="click:;"> Heroe Berria Gehitu </button></div><div _ngcontent-ng-c3748466491="" class="top-heroes-container"><ul _ngcontent-ng-c3748466491="" class="all-heroes-list"><li _ngcontent-ng-c3748466491=""><span _ngcontent-ng-c3748466491="" class="hero-id">1</span><a _ngcontent-ng-c3748466491="" class="all-hero-btn" href="/hero/1" jsaction="click:;">Superman</a><button _ngcontent-ng-c3748466491="" title="Eliminar heroe" class="delete-btn btn btn-icon btn-danger" jsaction="click:;"> × </button></li><li _ngcontent-ng-c3748466491=""><span _ngcontent-ng-c3748466491="" class="hero-id">2</span><a _ngcontent-ng-c3748466491="" class="all-hero-btn" href="/hero/2" jsaction="click:;">Batman</a><button _ngcontent-ng-c3748466491="" title="Eliminar heroe" class="delete-btn btn btn-icon btn-danger" jsaction="click:;"> × </button></li><li _ngcontent-ng-c3748466491=""><span _ngcontent-ng-c3748466491="" class="hero-id">3</span><a _ngcontent-ng-c3748466491="" class="all-hero-btn" href="/hero/3" jsaction="click:;">Wonder Woman</a><button _ngcontent-ng-c3748466491="" title="Eliminar heroe" class="delete-btn btn btn-icon btn-danger" jsaction="click:;"> × </button></li><li _ngcontent-ng-c3748466491=""><span _ngcontent-ng-c3748466491="" class="hero-id">4</span><a _ngcontent-ng-c3748466491="" class="all-hero-btn" href="/hero/4" jsaction="click:;">Flash</a><button _ngcontent-ng-c3748466491="" title="Eliminar heroe" class="delete-btn btn btn-icon btn-danger" jsaction="click:;"> × </button></li><li _ngcontent-ng-c3748466491=""><span _ngcontent-ng-c3748466491="" class="hero-id">5</span><a _ngcontent-ng-c3748466491="" class="all-hero-btn" href="/hero/5" jsaction="click:;">Green Lantern</a><button _ngcontent-ng-c3748466491="" title="Eliminar heroe" class="delete-btn btn btn-icon btn-danger" jsaction="click:;"> × </button></li><li _ngcontent-ng-c3748466491=""><span _ngcontent-ng-c3748466491="" class="hero-id">6</span><a _ngcontent-ng-c3748466491="" class="all-hero-btn" href="/hero/6" jsaction="click:;">Aquaman</a><button _ngcontent-ng-c3748466491="" title="Eliminar heroe" class="delete-btn btn btn-icon btn-danger" jsaction="click:;"> × </button></li><li _ngcontent-ng-c3748466491=""><span _ngcontent-ng-c3748466491="" class="hero-id">7</span><a _ngcontent-ng-c3748466491="" class="all-hero-btn" href="/hero/7" jsaction="click:;">Cyborg</a><button _ngcontent-ng-c3748466491="" title="Eliminar heroe" class="delete-btn btn btn-icon btn-danger" jsaction="click:;"> × </button></li><li _ngcontent-ng-c3748466491=""><span _ngcontent-ng-c3748466491="" class="hero-id">8</span><a _ngcontent-ng-c3748466491="" class="all-hero-btn" href="/hero/8" jsaction="click:;">Martian Manhunter</a><button _ngcontent-ng-c3748466491="" title="Eliminar heroe" class="delete-btn btn btn-icon btn-danger" jsaction="click:;"> × </button></li><li _ngcontent-ng-c3748466491=""><span _ngcontent-ng-c3748466491="" class="hero-id">9</span><a _ngcontent-ng-c3748466491="" class="all-hero-btn" href="/hero/9" jsaction="click:;">Green Arrow</a><button _ngcontent-ng-c3748466491="" title="Eliminar heroe" class="delete-btn btn btn-icon btn-danger" jsaction="click:;"> × </button></li><li _ngcontent-ng-c3748466491=""><span _ngcontent-ng-c3748466491="" class="hero-id">10</span><a _ngcontent-ng-c3748466491="" class="all-hero-btn" href="/hero/10" jsaction="click:;">Hawkgirl</a><button _ngcontent-ng-c3748466491="" title="Eliminar heroe" class="delete-btn btn btn-icon btn-danger" jsaction="click:;"> × </button></li><li _ngcontent-ng-c3748466491=""><span _ngcontent-ng-c3748466491="" class="hero-id">11</span><a _ngcontent-ng-c3748466491="" class="all-hero-btn" href="/hero/11" jsaction="click:;">Black Canary</a><button _ngcontent-ng-c3748466491="" title="Eliminar heroe" class="delete-btn btn btn-icon btn-danger" jsaction="click:;"> × </button></li><!--container--></ul></div><!--container--></div></app-heroes-page><!--container--></app-root>
+<script src="polyfills.js" type="module"></script><script src="main.js" type="module"></script>
+
+
+<script id="ng-state" type="application/json">{"__nghData__":[{"t":{"8":"t0","9":"t1"},"c":{"8":[{"i":"t0","r":1,"x":11}],"9":[]}},{"c":{"0":[{"i":"c3748466491","r":1}]}}]}</script></body></html>`;

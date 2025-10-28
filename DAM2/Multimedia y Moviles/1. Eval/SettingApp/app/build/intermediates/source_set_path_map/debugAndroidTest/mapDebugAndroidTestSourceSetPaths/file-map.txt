@@ -1,0 +1,7 @@
+com.example.settingapp.test.app-core-1.7.0-0 C:\Users\in1dm3-d\.gradle\caches\8.13\transforms\8d2f34fecdf62d023a29b80b86b7f026\transformed\core-1.7.0\res
+com.example.settingapp.test.app-tracing-1.2.0-1 C:\Users\in1dm3-d\.gradle\caches\8.13\transforms\dc02d261db96aa345a422a6436dbdd86\transformed\tracing-1.2.0\res
+com.example.settingapp.test.app-androidTest-2 C:\Users\in1dm3-d\AndroidStudioProjects\SettingApp\app\build\generated\res\resValues\androidTest\debug
+com.example.settingapp.test.app-updated_navigation_xml-3 C:\Users\in1dm3-d\AndroidStudioProjects\SettingApp\app\build\generated\updated_navigation_xml\debugAndroidTest
+com.example.settingapp.test.app-mergeDebugAndroidTestResources-4 C:\Users\in1dm3-d\AndroidStudioProjects\SettingApp\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.settingapp.test.app-mergeDebugAndroidTestResources-5 C:\Users\in1dm3-d\AndroidStudioProjects\SettingApp\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.settingapp.test.app-debugAndroidTest-6 C:\Users\in1dm3-d\AndroidStudioProjects\SettingApp\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

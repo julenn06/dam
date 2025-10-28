@@ -1,0 +1,22 @@
+caption {
+    color: #3A3F59;
+    font-family:arial black;
+}
+
+.taula {
+    background-color: #F2F0E6;
+    border-collapse: collapse;
+}
+
+.bluish {
+    background-color: #8D91A6;
+
+}
+
+.brownish {
+    background-color: #a6a08d;
+}
+
+td {
+    padding-right: 1em;
+}

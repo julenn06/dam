@@ -1,0 +1,36 @@
+[{
+    "postua": 1,
+    "izena": "Jannik Sinner",
+    "adina": 23,
+    "info": "https://es.wikipedia.org/wiki/Jannik_Sinner",
+    "irudia": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Jannik_Sinner_%282024_US_Open%29_04_%28cropped%29.jpg/480px-Jannik_Sinner_%282024_US_Open%29_04_%28cropped%29.jpg"
+  },
+  {
+    "postua": 2,
+    "izena": "Alexander Zverev",
+    "adina": 27,
+    "info": "https://es.wikipedia.org/wiki/Alexander_Zverev",
+    "irudia": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Zverev_MCM23_%2820%29.jpg/368px-Zverev_MCM23_%2820%29.jpg"
+  },
+  {
+    "postua": 3,
+    "izena": "Carlos Alcaraz",
+    "adina": 21,
+    "info": "https://es.wikipedia.org/wiki/Carlos_Alcaraz",
+    "irudia": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/25th_Laureus_World_Sports_Awards_-_Red_Carpet_-_Carlos_Alcaraz_-_240422_192324_%28cropped%29.jpg/500px-25th_Laureus_World_Sports_Awards_-_Red_Carpet_-_Carlos_Alcaraz_-_240422_192324_%28cropped%29.jpg"
+  },
+  {
+    "postua": 4,
+    "izena": "Taylor Fritz",
+    "adina": 27,
+    "info": "https://es.wikipedia.org/wiki/Taylor_Fritz",
+    "irudia": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Fritz_MCM23_%2862%29_%2852882575177%29.jpg/368px-Fritz_MCM23_%2862%29_%2852882575177%29.jpg"
+  },
+  {
+    "postua": 5,
+    "izena": "Casper Ruud",
+    "adina": 26,
+    "info": "https://es.wikipedia.org/wiki/Casper_Ruud",
+    "irudia": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Ruud_RG22_%2858%29_%2852144535415%29.jpg/375px-Ruud_RG22_%2858%29_%2852144535415%29.jpg"
+  }
+]

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tienda xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="proba6.xsd" id="3003">
+    <pedidos>
+        <pedido id="P001" fecha="2025-04-26">
+            <cliente id="C101">
+                <nombre>Andrea Ruiz</nombre>
+                <direccion>
+                    <calle>Horizonte 22</calle>
+                    <codigoPostal>46000</codigoPostal>
+                    <ciudad>Valencia</ciudad>
+                    <provincia>Valencia</provincia>
+                </direccion>
+                <telefono num="688112233"/>
+            </cliente>
+            <productos>
+                <producto id="PR01" cantidad="2" precioUnitario="29.99">
+                    <descripcion>Ratón inalámbrico Logitech</descripcion>
+                </producto>
+                <producto id="PR02" cantidad="1" precioUnitario="999.99">
+                    <descripcion>Portátil ASUS Zenbook</descripcion>
+                </producto>
+            </productos>
+            <descuento>5</descuento>
+        </pedido>
+    </pedidos>
+</tienda>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tokiak>
+    <lekua>
+        <izena>Askata</izena>
+        <herria>Donostia</herria>
+        <kontinentea>Asia</kontinentea>
+    </lekua>
+
+    <lekua>
+        <izena>Lisboa</izena>
+        <herria>Portugal</herria>
+        <kontinentea>Europa</kontinentea>
+    </lekua>
+
+    <lekua>
+        <izena>El Cairo</izena>
+        <herria>Egipto</herria>
+        <kontinentea>Afrika</kontinentea>
+    </lekua>
+</tokiak>

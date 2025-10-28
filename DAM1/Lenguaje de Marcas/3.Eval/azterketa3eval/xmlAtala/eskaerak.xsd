@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <xs:element name="eskaerak">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="eskaera">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="bezeroa">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="izena" type="xs:string" />
+                                        <xs:choice>
+                                        <xs:element name="emaila">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="tlfnZbk" type="xs:int"></xs:element>
+                                    </xs:choice>
+                                    </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="produktuak" minOccurs="1">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="produktua" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="izena">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:enumeration value="Kamiseta"/>
+                                                    <xs:enumeration value="Praka"/>
+                                                    <xs:enumeration value="Zapatak"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                    </xs:element>
+                                                <xs:element name="kantitatea">
+                                                    <xs:simpleType>
+                                                        <xs:restriction base="xs:integer">
+                                                            <xs:minInclusive value="1"/>
+                                                        </xs:restriction>
+                                                    </xs:simpleType>
+                                                </xs:element>
+                                                <xs:element name="prezioa">
+                                                    <xs:simpleType>
+                                                        <xs:restriction base="xs:decimal">
+                                                            <xs:totalDigits value="4"/>
+                                                            <xs:fractionDigits value="2"/>
+                                                        </xs:restriction>
+                                                    </xs:simpleType>
+                                                </xs:element>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+</xs:schema>

@@ -1,0 +1,39 @@
+{
+    "tokiak": {
+        "lekua": [
+            {
+                "$": {
+                    "kontinentea": "Asia"
+                },
+                "izena": [
+                    "Askata"
+                ],
+                "herria": [
+                    "Donostia"
+                ]
+            },
+            {
+                "$": {
+                    "kontinentea": "Europa"
+                },
+                "izena": [
+                    "Lisboa"
+                ],
+                "herria": [
+                    "Portugal"
+                ]
+            },
+            {
+                "$": {
+                    "kontinentea": "Afrika"
+                },
+                "izena": [
+                    "El Cairo"
+                ],
+                "herria": [
+                    "Egipto"
+                ]
+            }
+        ]
+    }
+}

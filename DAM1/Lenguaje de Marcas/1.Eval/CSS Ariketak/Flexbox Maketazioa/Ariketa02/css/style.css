@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    height: 150px;
+    background-color: #FF4945;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main {
+    background-color: #FFA931;
+    flex-grow: 4;
+}
+
+.sidebar {
+    background-color: #9B0579;
+    flex-grow: 1;
+}
+
+footer {
+    height: 100px;
+    background-color: #00778F;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#main_sidebar {
+    display: flex;
+    flex-grow: 1;
+}
+
+button {
+    justify-content: right;
+}

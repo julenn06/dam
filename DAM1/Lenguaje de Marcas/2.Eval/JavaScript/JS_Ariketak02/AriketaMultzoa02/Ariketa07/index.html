@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celsius --> Fahrenheit</title>
+</head>
+
+<body>
+    <h1>Celsius --> Fahrenheit</h1>
+
+    <label for="celsiusInput">Celsius:</label>
+    <input type="number" id="celsiusInput" value="0">
+
+    <label for="fahrenheitOutput">Fahrenheit:</label>
+    <input type="text" id="fahrenheitOutput" placeholder="Emaitza °F" readonly>
+
+    <script>
+        const fahrenheitOutput = document.getElementById('fahrenheitOutput');
+
+        celsiusInput.addEventListener('input', () => {
+
+            const celsius = parseFloat(celsiusInput.value);
+
+            const fahrenheit = (celsius * 9 / 5) + 32;
+
+            fahrenheitOutput.value = fahrenheit.toFixed(2);
+        });
+    </script>
+</body>
+
+</html>

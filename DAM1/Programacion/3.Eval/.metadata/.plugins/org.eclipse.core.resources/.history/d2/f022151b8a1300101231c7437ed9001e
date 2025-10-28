@@ -1,0 +1,5 @@
+package modeloa;
+
+abstract class Langileak {
+
+}

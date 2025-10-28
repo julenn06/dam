@@ -1,0 +1,9 @@
+package modeloa;
+
+public class Nagusiak extends Langileak {
+
+	public Nagusiak(int id, String izena) {
+		super(id, izena);
+	}
+
+}

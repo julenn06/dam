@@ -1,0 +1,121 @@
+package view;
+
+import java.awt.EventQueue;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
+
+public class Profile extends JFrame {
+
+	private static final long serialVersionUID = 1L;
+	
+	private final JPanel contentPane;
+	private final JTextField txtIzena;
+	private final JTextField txtAbizena1;
+	private final JTextField txtAbizena2;
+
+	public static void main(String[] args) {
+		EventQueue.invokeLater(() -> {
+			try {
+				Profile frame = new Profile();
+				frame.setVisible(true);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		});
+	}
+
+	public Profile() {
+		hasieratuKomponenteak();
+	}
+
+	private void hasieratuKomponenteak() {
+		setTitle("Zure Profila");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		setLocationRelativeTo(null);
+
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+
+		JLabel lblIzenaP = new JLabel("Izena:");
+		lblIzenaP.setBounds(89, 33, 92, 14);
+		contentPane.add(lblIzenaP);
+
+		JLabel lblAbizena1P = new JLabel("Abizena:");
+		lblAbizena1P.setBounds(89, 58, 92, 14);
+		contentPane.add(lblAbizena1P);
+
+		JLabel lblAbizena2P = new JLabel("2º Abizena:");
+		lblAbizena2P.setBounds(89, 83, 92, 14);
+		contentPane.add(lblAbizena2P);
+
+		txtIzena = new JTextField();
+		txtIzena.setBounds(226, 30, 142, 20);
+		txtIzena.setColumns(10);
+		contentPane.add(txtIzena);
+
+		txtAbizena1 = new JTextField();
+		txtAbizena1.setBounds(226, 55, 142, 20);
+		txtAbizena1.setColumns(10);
+		contentPane.add(txtAbizena1);
+
+		txtAbizena2 = new JTextField();
+		txtAbizena2.setBounds(226, 80, 142, 20);
+		txtAbizena2.setColumns(10);
+		contentPane.add(txtAbizena2);
+
+		JButton btnOnartuP = new JButton("Onartu");
+		btnOnartuP.addActionListener(e -> onartuEkintza());
+		btnOnartuP.setBounds(127, 227, 89, 23);
+		contentPane.add(btnOnartuP);
+
+		JButton btnUtziP = new JButton("Utzi");
+		btnUtziP.addActionListener(e -> dispose());
+		btnUtziP.setBounds(226, 227, 89, 23);
+		contentPane.add(btnUtziP);
+
+		JButton btnChangePass = new JButton("Aldatu Pasahitza");
+		btnChangePass.addActionListener(e -> aldatuPasahitzaEkintza());
+		btnChangePass.setBounds(160, 128, 125, 23);
+		contentPane.add(btnChangePass);
+	}
+
+	private void onartuEkintza() {
+		System.out.println("Profila eguneratzen...");
+	}
+
+	private void aldatuPasahitzaEkintza() {
+		System.out.println("Pasahitza aldatzen...");
+	}
+
+	public void ezarriIzena(String izena) {
+		txtIzena.setText(izena);
+	}
+
+	public void ezarriAbizena1(String abizena) {
+		txtAbizena1.setText(abizena);
+	}
+
+	public void ezarriAbizena2(String abizena) {
+		txtAbizena2.setText(abizena);
+	}
+
+	public String lortuIzena() {
+		return txtIzena.getText();
+	}
+
+	public String lortuAbizena1() {
+		return txtAbizena1.getText();
+	}
+
+	public String lortuAbizena2() {
+		return txtAbizena2.getText();
+	}
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faktura id="876" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="fakturak.xsd">
+
+    <f_data>2022-02-28T08:25:02</f_data>
+
+    <saltzailea id="12">
+        <izena>June Arriaga Zarate</izena>
+    </saltzailea>
+
+    <bezeroa id="9878">
+        <izena>Leire Bengoetxea Zallo</izena>
+        <helbidea>
+            <kalea>Kale Nagusia 8, 2 - A</kalea>
+            <kp>48300</kp>
+            <herria>Gernika</herria>
+            <probintzia>Bizkaia</probintzia>
+        </helbidea>
+        <telefonoak>
+            <telefonoa num="6111666"></telefonoa>
+            <telefonoa num="954666111"></telefonoa>
+        </telefonoak>
+    </bezeroa>
+
+    <artikulua id="121" bez="21">
+        <deskribapena>Aulki Birakaria, C-121 modeloa</deskribapena>
+        <prezioa>98.23</prezioa>
+        <kant>1</kant>
+    </artikulua>
+
+    <deskontua>20</deskontua>
+</faktura>

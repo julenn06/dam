@@ -1,0 +1,83 @@
+[
+  {
+    "izena": "Gorbea",
+    "altuera": 1481,
+    "herria": "Zigoitia",
+    "lurraldea": "Araba",
+    "irudia": "gorbea.jpg",
+    "koordenatuak": { "latitudea": 43.0667, "longitudea": -2.7333 },
+    "deskribapena": "Gorbea Arabako eta Bizkaiko mendirik altuena da, eta mendi horren tontorrean gurutze ezagun bat dago."
+  },
+  {
+    "izena": "Tologorri",
+    "altuera": 1068,
+    "herria": "Amurrio",
+    "lurraldea": "Araba",
+    "irudia": "tologorri.jpg",
+    "koordenatuak": { "latitudea": 43.0604, "longitudea": -3.0157 },
+    "deskribapena": "Itxina mendilerroko gailur ikusgarria da, bere horma bertikalengatik ezaguna."
+  },
+  {
+    "izena": "Anboto",
+    "altuera": 1331,
+    "herria": "Atxondo",
+    "lurraldea": "Bizkaia",
+    "irudia": "anboto.jpg",
+    "koordenatuak": { "latitudea": 43.1167, "longitudea": -2.6000 },
+    "deskribapena": "Anboto mendia euskal mitologiaren arabera Mari jainkosaren bizilekua da."
+  },
+  {
+    "izena": "Ganekogorta",
+    "altuera": 998,
+    "herria": "Alonsotegi",
+    "lurraldea": "Bizkaia",
+    "irudia": "ganekogorta.jpg",
+    "koordenatuak": { "latitudea": 43.2167, "longitudea": -2.9333 },
+    "deskribapena": "Bilbotik gertu dagoen mendi ezaguna, mendizale askoren helmuga."
+  },
+  {
+    "izena": "Aizkorri",
+    "altuera": 1528,
+    "herria": "Zegama",
+    "lurraldea": "Gipuzkoa",
+    "irudia": "aizkorri.jpg",
+    "koordenatuak": { "latitudea": 42.9833, "longitudea": -2.3333 },
+    "deskribapena": "Aizkorri Gipuzkoako mendirik altuena da eta Aizkorri-Aratz parke naturalean dago."
+  },
+  {
+    "izena": "Txindoki",
+    "altuera": 1346,
+    "herria": "Larraitz",
+    "lurraldea": "Gipuzkoa",
+    "irudia": "txindoki.jpg",
+    "koordenatuak": { "latitudea": 43.0000, "longitudea": -2.0833 },
+    "deskribapena": "‘Larrun Txiki’ izenez ere ezaguna, oso mendi ikonikoa da Euskal Herrian."
+  },
+  {
+    "izena": "Hiru Erregeen Mahaia",
+    "altuera": 2428,
+    "herria": "Isaba",
+    "lurraldea": "Nafarroa",
+    "irudia": "hiru_erregeen_mahaia.jpg",
+    "koordenatuak": { "latitudea": 42.8536, "longitudea": -0.8175 },
+    "deskribapena": "Nafarroa, Aragoia eta Bearno arteko mugan kokatutako mendia, izen historikoarekin."
+  },
+  {
+    "izena": "Ori",
+    "altuera": 2017,
+    "herria": "Izaba",
+    "lurraldea": "Nafarroa",
+    "irudia": "ori.jpg",
+    "koordenatuak": { "latitudea": 42.9111, "longitudea": -0.9961 },
+    "deskribapena": "Nafarroako mendirik altuena, Pirinioetan kokatua."
+  },
+  {
+    "izena": "Auñamendi",
+    "altuera": 2504,
+    "herria": "Larrau",
+    "lurraldea": "Zuberoa",
+    "irudia": "aunamendi.jpg",
+    "koordenatuak": { "latitudea": 42.8883, "longitudea": -0.7267 },
+    "deskribapena": "Ipar Euskal Herriko mendirik garaienetako bat, Pic d’Anie bezala ere ezaguna."
+  }
+]
