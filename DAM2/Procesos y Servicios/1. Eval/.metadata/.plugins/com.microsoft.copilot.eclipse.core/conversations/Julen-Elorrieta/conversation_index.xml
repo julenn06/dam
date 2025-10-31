@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><user username="Julen-Elorrieta">
-    <conversations>
-        <conversation conversationId="07d0e285-1d50-4dfe-9eda-7e7ba4809b40" creationDate="2025-10-16T16:16:46.800986700Z" lastMessageDate="2025-10-16T16:21:12.995326500Z" title="Code Formatting and Warning Resolution"/>
-        <conversation conversationId="93263245-a025-41cc-82ec-b497d4ec2d6c" creationDate="2025-10-16T16:44:40.278645700Z" lastMessageDate="2025-10-16T16:46:14.658369500Z" title="quita el warning del pom.xml"/>
-        <conversation conversationId="aa9a0b35-c923-4082-a5ed-a37f4746347a" creationDate="2025-10-17T13:29:35.051746500Z" lastMessageDate="2025-10-17T13:52:14.896465100Z" title="Removing Warnings from RegisterDialog"/>
-        <conversation conversationId="332f08e0-f3f9-4f2e-9973-86602f32c1ad" creationDate="2025-10-17T13:57:07.807839800Z" lastMessageDate="2025-10-17T14:11:20.165180300Z" title="Code Optimization and Infinite Loop Fix"/>
-        <conversation conversationId="7d6912cc-a926-405d-9cc5-44f5d6cbd39e" creationDate="2025-10-17T14:58:31.610456Z" lastMessageDate="2025-10-17T15:02:57.451004Z" title="Fixing Compilation Errors in View Files"/>
-    </conversations>
-</user>
