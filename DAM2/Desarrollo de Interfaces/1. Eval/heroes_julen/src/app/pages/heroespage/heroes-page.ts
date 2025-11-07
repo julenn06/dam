@@ -3,82 +3,68 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   OnInit,
-  OnDestroy,
-  Inject,
-  PLATFORM_ID
 } from '@angular/core';
-import {
-  CommonModule,
-  isPlatformBrowser
-} from '@angular/common';
-import {
-  RouterModule
-} from '@angular/router';
-import {
-  FormsModule
-} from '@angular/forms';
-import {
-  allHeroes
-} from '../../hero/hero';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { Hero } from '../../hero/hero';
+import { HeroesRemoteService } from '../../services/heroes-remote-service';
 
 @Component({
   selector: 'app-heroes-page',
   standalone: true,
-  imports: [CommonModule, RouterModule, FormsModule],
+  imports: [CommonModule, RouterModule, FormsModule, HttpClientModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './heroes-page.html',
   styleUrl: './heroes-page.css',
 })
-export class HeroesPage implements OnInit, OnDestroy {
-  allHeroes = [...allHeroes];
+export class HeroesPage implements OnInit {
+  allHeroes: Hero[] = [];
 
   showAddHero = false;
   newHeroName = '';
   newHeroPower = '';
 
-  private _heroesUpdatedHandler = () => {
-    this.allHeroes = [...allHeroes];
-    this.cdr.markForCheck();
-  };
-
-  constructor(private cdr: ChangeDetectorRef, @Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(private cdr: ChangeDetectorRef, private remote: HeroesRemoteService) {}
 
   ngOnInit(): void {
-    if (isPlatformBrowser(this.platformId)) {
-      window.addEventListener('heroes-updated', this._heroesUpdatedHandler);
-    }
+    this.loadHeroes();
   }
 
-  ngOnDestroy(): void {
-    if (isPlatformBrowser(this.platformId)) {
-      window.removeEventListener('heroes-updated', this._heroesUpdatedHandler);
-    }
+  private loadHeroes() {
+    this.remote.getAllHeroes().subscribe({
+      next: (hs) => {
+        this.allHeroes = hs;
+        this.cdr.markForCheck();
+      },
+      error: (err) => {
+        console.error('Error loading heroes', err);
+      }
+    });
   }
 
   deleteHero(heroId: number) {
-    const idx = allHeroes.findIndex(h => h.id === heroId);
-    if (idx !== -1) {
-      allHeroes.splice(idx, 1);
-    }
-    this.allHeroes = [...allHeroes];
-    if (isPlatformBrowser(this.platformId)) {
-      window.dispatchEvent(new Event('heroes-updated'));
-    }
+    this.remote.deleteHero(heroId).subscribe({
+      next: () => {
+        this.loadHeroes();
+      },
+      error: (err) => console.error('Delete failed', err)
+    });
   }
 
   submitAddHero() {
-    const newId = allHeroes.length ? Math.max(...allHeroes.map((h) => h.id)) + 1 : 1;
-    const newHero = {
-      id: newId,
-      name: this.newHeroName,
-      power: this.newHeroPower,
-    };
-    allHeroes.push(newHero);
-    this.allHeroes = [...allHeroes];
-    if (isPlatformBrowser(this.platformId)) {
-      window.dispatchEvent(new Event('heroes-updated'));
-    }
-    this.closeAddHero();
+    const name = this.newHeroName.trim();
+    const power = this.newHeroPower.trim();
+    if (!name || !power) return;
+
+    this.remote.createHero(name, power).subscribe({
+      next: (created) => {
+        this.loadHeroes();
+        this.closeAddHero();
+      },
+      error: (err) => console.error('Create failed', err)
+    });
   }
 
   closeAddHero() {
@@ -87,9 +73,7 @@ export class HeroesPage implements OnInit, OnDestroy {
     this.newHeroPower = '';
   }
 
-  trackById(_index: number, hero: {
-    id: number
-  }) {
+  trackById(_index: number, hero: { id: number }) {
     return hero.id;
   }
 }

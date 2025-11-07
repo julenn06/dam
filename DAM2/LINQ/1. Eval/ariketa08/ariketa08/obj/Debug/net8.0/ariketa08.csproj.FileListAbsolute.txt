@@ -1,0 +1,14 @@
+C:\Users\in2dm3-d.ELORRIETA\Desktop\Pasar\source\repos\ariketa08\ariketa08\bin\Debug\net8.0\ariketa08.exe
+C:\Users\in2dm3-d.ELORRIETA\Desktop\Pasar\source\repos\ariketa08\ariketa08\bin\Debug\net8.0\ariketa08.deps.json
+C:\Users\in2dm3-d.ELORRIETA\Desktop\Pasar\source\repos\ariketa08\ariketa08\bin\Debug\net8.0\ariketa08.runtimeconfig.json
+C:\Users\in2dm3-d.ELORRIETA\Desktop\Pasar\source\repos\ariketa08\ariketa08\bin\Debug\net8.0\ariketa08.dll
+C:\Users\in2dm3-d.ELORRIETA\Desktop\Pasar\source\repos\ariketa08\ariketa08\bin\Debug\net8.0\ariketa08.pdb
+C:\Users\in2dm3-d.ELORRIETA\Desktop\Pasar\source\repos\ariketa08\ariketa08\obj\Debug\net8.0\ariketa08.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\in2dm3-d.ELORRIETA\Desktop\Pasar\source\repos\ariketa08\ariketa08\obj\Debug\net8.0\ariketa08.AssemblyInfoInputs.cache
+C:\Users\in2dm3-d.ELORRIETA\Desktop\Pasar\source\repos\ariketa08\ariketa08\obj\Debug\net8.0\ariketa08.AssemblyInfo.cs
+C:\Users\in2dm3-d.ELORRIETA\Desktop\Pasar\source\repos\ariketa08\ariketa08\obj\Debug\net8.0\ariketa08.csproj.CoreCompileInputs.cache
+C:\Users\in2dm3-d.ELORRIETA\Desktop\Pasar\source\repos\ariketa08\ariketa08\obj\Debug\net8.0\ariketa08.dll
+C:\Users\in2dm3-d.ELORRIETA\Desktop\Pasar\source\repos\ariketa08\ariketa08\obj\Debug\net8.0\refint\ariketa08.dll
+C:\Users\in2dm3-d.ELORRIETA\Desktop\Pasar\source\repos\ariketa08\ariketa08\obj\Debug\net8.0\ariketa08.pdb
+C:\Users\in2dm3-d.ELORRIETA\Desktop\Pasar\source\repos\ariketa08\ariketa08\obj\Debug\net8.0\ariketa08.genruntimeconfig.cache
+C:\Users\in2dm3-d.ELORRIETA\Desktop\Pasar\source\repos\ariketa08\ariketa08\obj\Debug\net8.0\ref\ariketa08.dll

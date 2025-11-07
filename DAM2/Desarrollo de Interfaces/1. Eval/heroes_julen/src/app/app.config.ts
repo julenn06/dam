@@ -2,6 +2,7 @@ import {
   ApplicationConfig,
   provideBrowserGlobalErrorListeners,
   provideZoneChangeDetection,
+  importProvidersFrom,
 } from '@angular/core';
 import {
   provideRouter
@@ -14,6 +15,7 @@ import {
   provideClientHydration,
   withEventReplay,
 } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -23,5 +25,6 @@ export const appConfig: ApplicationConfig = {
     }),
     provideRouter(routes),
     provideClientHydration(withEventReplay()),
+    importProvidersFrom(HttpClientModule),
   ],
 };
