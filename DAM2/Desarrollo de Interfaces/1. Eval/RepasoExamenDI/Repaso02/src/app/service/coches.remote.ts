@@ -74,5 +74,17 @@ export class CochesRemoteService {
       })
     );
   }
+
+  getCochesWithEvenYear(): Observable<Coche[]> {
+    return this.http.get<Coche[]>(this.apiUrl).pipe(
+      map(coches => coches.filter(c => Number(c.ano) % 2 === 0))
+    );
+  }
+
+  getCochesByTipo(tipo: string): Observable<Coche[]> {
+    return this.http.get<Coche[]>(this.apiUrl).pipe(
+      map(coches => coches.filter(c => c.tipo.toLowerCase() === tipo.toLowerCase()))
+    );
+  }
   
 }

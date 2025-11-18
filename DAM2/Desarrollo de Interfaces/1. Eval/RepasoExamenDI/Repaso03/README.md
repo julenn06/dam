@@ -1,4 +1,4 @@
-# Repaso02
+# Repaso03
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.9.
 
@@ -19,6 +19,20 @@ ng serve
 ```
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+
+## Features
+
+This application is a library management system that allows you to:
+
+- View all books
+- Search books by ID, author, genre, or publication year
+- Filter books by genre using a dropdown
+- Add new books
+- Edit existing books
+- Delete books by ID or title
+- View books with even publication years
+
+The backend is simulated using json-server with a local JSON file.
 
 ## Code scaffolding
 

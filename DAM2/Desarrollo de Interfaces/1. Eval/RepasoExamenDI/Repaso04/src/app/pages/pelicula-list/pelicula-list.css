@@ -1,0 +1,31 @@
+.filters {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.peliculas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.pelicula-card {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.pelicula-card:hover {
+  transform: scale(1.02);
+}
+
+.pelicula-poster {
+  height: 200px;
+  object-fit: cover;
+}
+
+mat-card-content p {
+  margin: 4px 0;
+}

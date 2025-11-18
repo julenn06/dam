@@ -1,0 +1,56 @@
+<h1>Estadísticas de Películas</h1>
+
+<div class="estadisticas-grid">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Resumen General</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p><strong>Total de Películas:</strong> {{ estadisticas.totalPeliculas }}</p>
+      <p><strong>Rating Promedio:</strong> {{ estadisticas.promedioRating }}/10</p>
+      <p><strong>Duración Promedio:</strong> {{ estadisticas.promedioDuracion }} min</p>
+      <p><strong>Recaudación Total:</strong> ${{ estadisticas.totalRecaudacion }}M</p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Géneros Disponibles</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-chip-listbox>
+        @for (genero of estadisticas.generos; track genero) {
+          <mat-chip>{{ genero }}</mat-chip>
+        }
+      </mat-chip-listbox>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Años con Películas</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-chip-listbox>
+        @for (ano of estadisticas.anos; track ano) {
+          <mat-chip>{{ ano }}</mat-chip>
+        }
+      </mat-chip-listbox>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Top 10 Películas por Recaudación</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      @for (pelicula of topPeliculas; track pelicula.id; let i = $index) {
+        <div class="top-pelicula">
+          <span class="rank">#{{ i + 1 }}</span>
+          <span class="titulo">{{ pelicula.titulo }}</span>
+          <span class="recaudacion">${{ pelicula.recaudacion }}M</span>
+        </div>
+      }
+    </mat-card-content>
+  </mat-card>
+</div>

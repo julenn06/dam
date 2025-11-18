@@ -1,0 +1,113 @@
+<div *ngIf="pelicula" class="pelicula-detail">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title *ngIf="!isEditing">{{ pelicula.titulo }}</mat-card-title>
+      <mat-card-subtitle *ngIf="!isEditing">{{ pelicula.director }} ({{ pelicula.ano }})</mat-card-subtitle>
+    </mat-card-header>
+
+    <img mat-card-image [src]="pelicula.poster" [alt]="pelicula.titulo" class="pelicula-poster">
+
+    <mat-card-content>
+      <div *ngIf="!isEditing" class="view-mode">
+        <p><strong>Género:</strong> {{ pelicula.genero }}</p>
+        <p><strong>Actores:</strong></p>
+        <mat-chip-listbox>
+          <mat-chip *ngFor="let actor of pelicula.actores">{{ actor }}</mat-chip>
+        </mat-chip-listbox>
+        <p><strong>Duración:</strong> {{ pelicula.duracion }} minutos</p>
+        <p><strong>Rating:</strong> {{ pelicula.rating }}/10</p>
+        <p><strong>Presupuesto:</strong> ${{ pelicula.presupuesto }}M</p>
+        <p><strong>Recaudación:</strong> ${{ pelicula.recaudacion }}M</p>
+        <p><strong>Sinopsis:</strong> {{ pelicula.sinopsis }}</p>
+      </div>
+
+      <div *ngIf="isEditing" class="edit-mode">
+        <mat-form-field>
+          <mat-label>Título</mat-label>
+          <input matInput [(ngModel)]="pelicula.titulo">
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Director</mat-label>
+          <input matInput [(ngModel)]="pelicula.director">
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Género</mat-label>
+          <mat-select [(ngModel)]="pelicula.genero">
+            <mat-option *ngFor="let genero of generos" [value]="genero">{{ genero }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Actores (separados por coma)</mat-label>
+          <input matInput [(ngModel)]="pelicula.actores" [value]="pelicula.actores.join(', ')" (input)="pelicula.actores = $any($event.target).value.split(', ')">
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Año</mat-label>
+          <input matInput type="number" [(ngModel)]="pelicula.ano">
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Duración (min)</mat-label>
+          <input matInput type="number" [(ngModel)]="pelicula.duracion">
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Rating</mat-label>
+          <input matInput type="number" min="1" max="10" [(ngModel)]="pelicula.rating">
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Presupuesto (M$)</mat-label>
+          <input matInput type="number" [(ngModel)]="pelicula.presupuesto">
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Recaudación (M$)</mat-label>
+          <input matInput type="number" [(ngModel)]="pelicula.recaudacion">
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Poster URL</mat-label>
+          <input matInput [(ngModel)]="pelicula.poster">
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Sinopsis</mat-label>
+          <textarea matInput [(ngModel)]="pelicula.sinopsis" rows="4"></textarea>
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-button (click)="goBack()">
+        <mat-icon>arrow_back</mat-icon>
+        Volver
+      </button>
+
+      <div *ngIf="!isEditing">
+        <button mat-button color="primary" (click)="toggleEdit()">
+          <mat-icon>edit</mat-icon>
+          Editar
+        </button>
+        <button mat-button color="warn" (click)="deletePelicula()">
+          <mat-icon>delete</mat-icon>
+          Eliminar
+        </button>
+      </div>
+
+      <div *ngIf="isEditing">
+        <button mat-button color="primary" (click)="saveChanges()">
+          <mat-icon>save</mat-icon>
+          Guardar
+        </button>
+        <button mat-button (click)="cancelEdit()">
+          <mat-icon>cancel</mat-icon>
+          Cancelar
+        </button>
+      </div>
+    </mat-card-actions>
+  </mat-card>
+</div>

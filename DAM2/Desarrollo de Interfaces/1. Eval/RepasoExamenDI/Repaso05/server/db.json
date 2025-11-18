@@ -1,0 +1,182 @@
+{
+  "artistas": [
+    {
+      "id": "1",
+      "nombre": "The Beatles",
+      "genero": "Rock",
+      "pais": "Reino Unido",
+      "anioFormacion": 1960,
+      "activo": false
+    },
+    {
+      "id": "2",
+      "nombre": "Queen",
+      "genero": "Rock",
+      "pais": "Reino Unido",
+      "anioFormacion": 1970,
+      "activo": false
+    },
+    {
+      "id": "3",
+      "nombre": "Michael Jackson",
+      "genero": "Pop",
+      "pais": "Estados Unidos",
+      "anioFormacion": 1964,
+      "activo": false
+    },
+    {
+      "id": "4",
+      "nombre": "Adele",
+      "genero": "Pop",
+      "pais": "Reino Unido",
+      "anioFormacion": 2006,
+      "activo": true
+    },
+    {
+      "id": "5",
+      "nombre": "Pink Floyd",
+      "genero": "Rock Progresivo",
+      "pais": "Reino Unido",
+      "anioFormacion": 1965,
+      "activo": false
+    }
+  ],
+  "albumes": [
+    {
+      "id": "1",
+      "titulo": "Abbey Road",
+      "artistaId": "1",
+      "anio": 1969,
+      "genero": "Rock",
+      "duracionTotal": 47.23
+    },
+    {
+      "id": "2",
+      "titulo": "Bohemian Rhapsody",
+      "artistaId": "2",
+      "anio": 1975,
+      "genero": "Rock",
+      "duracionTotal": 59.15
+    },
+    {
+      "id": "3",
+      "titulo": "Thriller",
+      "artistaId": "3",
+      "anio": 1982,
+      "genero": "Pop",
+      "duracionTotal": 42.19
+    },
+    {
+      "id": "4",
+      "titulo": "21",
+      "artistaId": "4",
+      "anio": 2011,
+      "genero": "Pop",
+      "duracionTotal": 48.11
+    },
+    {
+      "id": "5",
+      "titulo": "The Dark Side of the Moon",
+      "artistaId": "5",
+      "anio": 1973,
+      "genero": "Rock Progresivo",
+      "duracionTotal": 42.49
+    }
+  ],
+  "canciones": [
+    {
+      "id": "1",
+      "titulo": "Come Together",
+      "albumId": "1",
+      "artistaId": "1",
+      "duracion": 4.19,
+      "genero": "Rock"
+    },
+    {
+      "id": "2",
+      "titulo": "Something",
+      "albumId": "1",
+      "artistaId": "1",
+      "duracion": 2.59,
+      "genero": "Rock"
+    },
+    {
+      "id": "3",
+      "titulo": "Bohemian Rhapsody",
+      "albumId": "2",
+      "artistaId": "2",
+      "duracion": 5.55,
+      "genero": "Rock"
+    },
+    {
+      "id": "4",
+      "titulo": "We Will Rock You",
+      "albumId": "2",
+      "artistaId": "2",
+      "duracion": 2.02,
+      "genero": "Rock"
+    },
+    {
+      "id": "5",
+      "titulo": "Billie Jean",
+      "albumId": "3",
+      "artistaId": "3",
+      "duracion": 4.54,
+      "genero": "Pop"
+    },
+    {
+      "id": "6",
+      "titulo": "Beat It",
+      "albumId": "3",
+      "artistaId": "3",
+      "duracion": 4.18,
+      "genero": "Pop"
+    },
+    {
+      "id": "7",
+      "titulo": "Rolling in the Deep",
+      "albumId": "4",
+      "artistaId": "4",
+      "duracion": 3.48,
+      "genero": "Pop"
+    },
+    {
+      "id": "8",
+      "titulo": "Someone Like You",
+      "albumId": "4",
+      "artistaId": "4",
+      "duracion": 4.45,
+      "genero": "Pop"
+    },
+    {
+      "id": "9",
+      "titulo": "Money",
+      "albumId": "5",
+      "artistaId": "5",
+      "duracion": 6.22,
+      "genero": "Rock Progresivo"
+    },
+    {
+      "id": "10",
+      "titulo": "Time",
+      "albumId": "5",
+      "artistaId": "5",
+      "duracion": 7.06,
+      "genero": "Rock Progresivo"
+    }
+  ],
+  "playlists": [
+    {
+      "id": "1",
+      "nombre": "Rock Classics",
+      "descripcion": "Las mejores canciones de rock de todos los tiempos",
+      "cancionIds": ["1", "2", "3", "4", "9", "10"]
+    },
+    {
+      "id": "2",
+      "nombre": "Pop Hits",
+      "descripcion": "Éxitos pop actuales y clásicos",
+      "cancionIds": ["5", "6", "7", "8"]
+    }
+  ]
+}

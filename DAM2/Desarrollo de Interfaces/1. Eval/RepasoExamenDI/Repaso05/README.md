@@ -1,18 +1,10 @@
-# Repaso02
+# Repaso05
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.9.
 
 ## Development server
 
-To start the backend server (json-server), run:
-
-```bash
-npm run server
-```
-
-This will start the json-server on port 3000.
-
-To start the Angular development server, run:
+To start a local development server, run:
 
 ```bash
 ng serve

@@ -33,6 +33,7 @@ export class FirstView {
   nombreCoche: any;
   numeroAno: number = 0;
   todosLosCoches: Coche[] = [];
+  tipoSeleccionado: string = '';
 
   constructor(private cdr: ChangeDetectorRef, private remote: CochesRemoteService, private router: Router) {}
 
@@ -155,12 +156,62 @@ export class FirstView {
     }
 
     eliminarCoche() {
-      throw new Error('Method not implemented.');
+      if (!this.idCoche) {
+        console.error('ID es obligatorio');
+        return;
+      }
+      this.remote.deleteCoche(this.idCoche).subscribe({
+        next: () => {
+          console.log('Coche eliminado exitosamente');
+          this.verCoches();
+          this.idCoche = 0;
+        },
+        error: (err) => console.error('Error eliminando coche', err)
+      });
     }
     eliminarCochePorNombre() {
-      throw new Error('Method not implemented.');
+      if (!this.nombreCoche || this.nombreCoche.trim() === '') {
+        console.error('Nombre es obligatorio');
+        return;
+      }
+      this.remote.deleteCocheByName(this.nombreCoche.trim()).subscribe({
+        next: () => {
+          console.log('Coche eliminado exitosamente');
+          this.verCoches();
+          this.nombreCoche = '';
+        },
+        error: (err) => console.error('Error eliminando coche', err)
+      });
     }
     unPar() {
-      throw new Error('Method not implemented.');
+      this.remote.getCochesWithEvenYear().subscribe({
+        next: (coches) => {
+          this.todosLosCoches = coches;
+          this.cdr.markForCheck();
+        },
+        error: (err) => {
+          console.error('Error cargando Coches con año par', err);
+          this.todosLosCoches = [];
+          this.cdr.markForCheck();
+        }
+      });
+    }
+
+    verCochesPorTipo() {
+      if (!this.tipoSeleccionado) {
+        console.error('Selecciona un tipo');
+        return;
+      }
+      this.remote.getCochesByTipo(this.tipoSeleccionado).subscribe({
+        next: (coches: Coche[]) => {
+          this.todosLosCoches = coches;
+          this.cdr.markForCheck();
+        },
+        error: (err: any) => {
+          console.error('Error cargando Coches por tipo', err);
+          this.todosLosCoches = [];
+          this.cdr.markForCheck();
+        }
+      });
     }
   }

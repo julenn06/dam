@@ -1,0 +1,22 @@
+{
+  "Coches": [
+    {
+      "id": "1",
+      "name": "Toyota Corolla",
+      "tipo": "Sedan",
+      "ano": 2020
+    },
+    {
+      "id": "2",
+      "name": "Honda Civic",
+      "tipo": "Sedan",
+      "ano": 2019
+    },
+    {
+      "id": "3",
+      "name": "Ford Mustang",
+      "tipo": "Coupe",
+      "ano": 2021
+    }
+  ]
+}

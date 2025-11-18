@@ -1,0 +1,28 @@
+.estadisticas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.top-pelicula {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.rank {
+  font-weight: bold;
+  color: #1976d2;
+}
+
+.titulo {
+  flex: 1;
+  margin: 0 16px;
+}
+
+.recaudacion {
+  font-weight: bold;
+  color: #388e3c;
+}

@@ -36,6 +36,7 @@
   <section class="seccion-consultas">
     <h3>Consultas</h3>
     <button (click)="verCoches()" class="btn-info">👁️ Ver todos los Coches</button>
+    <button (click)="unPar()" class="btn-info">🔢 Ver Coches con Año Par</button>
 
     <div class="consulta-por-id">
       <label>Buscar por ID:</label>
@@ -47,6 +48,16 @@
       <label>Buscar mayores de un año:</label>
             <input type="number" id="idAno" [(ngModel)]="numeroAno" placeholder="Año del Coche">
       <button (click)="verCochesMayoresDeUnAno()" class="btn-info">🔍 Buscar</button>
+      <label>Buscar por Tipo:</label>
+      <select [(ngModel)]="tipoSeleccionado">
+        <option value="">Selecciona un tipo</option>
+        <option value="Sedan">Sedan</option>
+        <option value="Coupe">Coupe</option>
+        <option value="SUV">SUV</option>
+        <option value="Hatchback">Hatchback</option>
+        <option value="Convertible">Convertible</option>
+      </select>
+      <button (click)="verCochesPorTipo()" class="btn-info">🔍 Buscar</button>
     </div>
   </section>
 
