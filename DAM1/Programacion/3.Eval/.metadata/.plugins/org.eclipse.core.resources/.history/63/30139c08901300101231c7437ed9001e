@@ -1,5 +1,0 @@
-package salbuespenak;
-
-public class ErrorData extends Exception {
-
-}

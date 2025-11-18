@@ -1,7 +1,0 @@
-package salbuespenak;
-
-public class ZbkDa
-extend Exception
-{
-
-}
