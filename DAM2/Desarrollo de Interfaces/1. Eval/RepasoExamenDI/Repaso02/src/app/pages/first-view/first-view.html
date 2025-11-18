@@ -1,0 +1,85 @@
+<div class="container">
+  <h2>Gestión de Coches</h2>
+
+  <!-- Sección de Crear Coche -->
+  <section class="seccion-crear">
+    <h3>Crear Nuevo Coche</h3>
+    <div class="formulario">
+      <input type="text" id="nombre" [(ngModel)]="nombre" placeholder="Nombre del Coche" required>
+      <input type="text" id="tipo" [(ngModel)]="tipo" placeholder="Tipo de Coche">
+      <input type="number" id="ano" [(ngModel)]="ano" placeholder="Año del Coche">
+      <div class="botones-formulario">
+        <button (click)="anadirCoche()" class="btn-success">✓ Añadir Coche</button>
+        <button (click)="limpiarDatos()" class="btn-cancel">✗ Cancelar</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Editar Coche -->
+  <section class="seccion-editar">
+    <h3>Editar Coche</h3>
+    <label>ID del Coche a editar:</label>
+    <input type="number" name="id" id="idCocheEditar" [(ngModel)]="idCoche" min="1">
+
+    <div class="formulario">
+      <input type="text" id="nombreNuevo" [(ngModel)]="nombreNuevo" placeholder="Nuevo nombre (opcional)">
+      <input type="text" id="tipoNuevo" [(ngModel)]="tipoNuevo" placeholder="Nuevo tipo (opcional)">
+      <input type="number" id="ano" [(ngModel)]="anoNuevo" placeholder="Año del Coche (opcional)">
+      <div class="botones-formulario">
+        <button (click)="nuevosDatos()" class="btn-success">✓ Guardar cambios</button>
+        <button (click)="limpiarDatosEdicion()" class="btn-cancel">✗ Cancelar</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Consultas -->
+  <section class="seccion-consultas">
+    <h3>Consultas</h3>
+    <button (click)="verCoches()" class="btn-info">👁️ Ver todos los Coches</button>
+
+    <div class="consulta-por-id">
+      <label>Buscar por ID:</label>
+      <input type="number" name="idBuscar" [(ngModel)]="idCoche" min="1" placeholder="ID">
+      <button (click)="verCochePorId()" class="btn-info">🔍 Buscar</button>
+      <label>Buscar por Nombre: </label>
+      <input type="text" name="idNombre" [(ngModel)]="nombreCoche" min="1" placeholder="Name">
+      <button (click)="verCochePorNombre()" class="btn-info">🔍 Buscar</button>
+      <label>Buscar mayores de un año:</label>
+            <input type="number" id="idAno" [(ngModel)]="numeroAno" placeholder="Año del Coche">
+      <button (click)="verCochesMayoresDeUnAno()" class="btn-info">🔍 Buscar</button>
+    </div>
+  </section>
+
+  <!-- Sección de Eliminar -->
+  <section class="seccion-eliminar">
+    <h3>Eliminar Coche</h3>
+    <div class="consulta-por-id">
+      <label>ID del Coche a eliminar:</label>
+      <input type="number" name="idEliminar" [(ngModel)]="idCoche" min="1" placeholder="ID">
+      <button (click)="eliminarCoche()" class="btn-danger">🗑️ Eliminar</button>
+      <label>Nombre del Coche a eliminar:</label>
+      <input type="text" name="nombreEliminar" [(ngModel)]="nombreCoche" min="1" placeholder="Name">
+      <button (click)="eliminarCochePorNombre()" class="btn-danger">🗑️ Eliminar</button>
+    </div>
+  </section>
+
+  <!-- Lista de Coches -->
+  <section class="seccion-resultados">
+    <h3>Resultados ({{ todosLosCoches.length }} Coches)</h3>
+    <div class="lista-Coches">
+      @if (todosLosCoches.length === 0) {
+      <p class="sin-resultados">No hay Coches para mostrar</p>
+      } @else {
+      <ul>
+        @for (Coche of todosLosCoches; track Coche.id) {
+        <li class="Coche-item">
+          <span class="Coche-id">ID: {{ Coche.id }}</span>
+          <strong class="Coche-nombre">{{ Coche.name }}</strong>
+          <em class="Coche-tipo">{{ Coche.tipo }}</em>
+        </li>
+        }
+      </ul>
+      }
+    </div>
+  </section>
+</div>
