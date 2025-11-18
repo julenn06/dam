@@ -1,22 +1,25 @@
+
+# Archivos sensibles
 serviceAccountKey.json
 google-service.json
-alumnos.xml
-alumnos.dat
-# Compiled output
-/dist
-/tmp
-/out-tsc
-/bazel-out
 
-# Node
-/node_modules
+# Salidas compiladas
+dist/
+tmp/
+out-tsc/
+bazel-out/
+
+# Node.js
+node_modules/
 npm-debug.log
 yarn-error.log
 
-# IDEs and editors
+# IDEs y editores
 .idea/
 .project
 .classpath
+bin/
+target/
 .c9/
 *.launch
 .settings/
@@ -30,16 +33,16 @@ yarn-error.log
 !.vscode/extensions.json
 .history/*
 
-# Miscellaneous
-/.angular/cache
+# Misceláneos
+.angular/cache/
 .sass-cache/
-/connect.lock
-/coverage
-/libpeerconnection.log
+connect.lock
+coverage/
+libpeerconnection.log
 testem.log
-/typings
+typings/
 __screenshots__/
 
-# System files
+# Archivos del sistema
 .DS_Store
 Thumbs.db
