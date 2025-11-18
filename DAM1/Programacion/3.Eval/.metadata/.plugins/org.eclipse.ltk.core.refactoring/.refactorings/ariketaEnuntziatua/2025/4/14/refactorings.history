@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy element &apos;BD_Konexioa.java&apos; to &apos;azterketaTxuleta/src/db_Konexioa&apos;&#x0D;&#x0A;- Original project: &apos;ariketaEnuntziatua&apos;&#x0D;&#x0A;- Destination element: &apos;azterketaTxuleta/src/db_Konexioa&apos;&#x0D;&#x0A;- Original element: &apos;ariketaEnuntziatua.BD_Konexioa.java&apos;" description="Copy compilation unit" destination="=azterketaTxuleta/src&lt;db_Konexioa" element1="/src&lt;ariketaEnuntziatua{BD_Konexioa.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1743673163704" units="1" version="1.0"/>
-</session>

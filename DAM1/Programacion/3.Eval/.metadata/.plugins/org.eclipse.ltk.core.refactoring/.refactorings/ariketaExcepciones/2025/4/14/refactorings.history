@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename compilation unit &apos;ariketa.main.java&apos; to &apos;Main.java&apos;&#x0D;&#x0A;- Original project: &apos;ariketaExcepciones&apos;&#x0D;&#x0A;- Original element: &apos;ariketa.main.java&apos;&#x0D;&#x0A;- Renamed element: &apos;ariketa.Main.java&apos;" description="Rename compilation unit &apos;main.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;ariketa{main.java" name="Main.java" references="false" stamp="1743902531377" version="1.0"/>
-</session>
