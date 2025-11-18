@@ -1,7 +1,7 @@
 import { inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map, Observable } from 'rxjs';
-import { House, HouseTypes } from './house';
+import { House, HouseTypes } from '../app/house';
 
 @Injectable({
   providedIn: 'root',
