@@ -24,19 +24,19 @@ export class CreationPage {
       city: ['', Validators.required],
       address: ['', Validators.required],
       lat: [0],
-      long: [0]
+      long: [0],
     }),
     isForSale: [false],
     salePrice: [0],
     isForRent: [false],
     rentPrice: [0],
-    picture: ['']
+    picture: [''],
   });
 
   onSubmit() {
     if (this.houseForm.valid) {
       const formValue = this.houseForm.value;
-      
+
       const newHouse: House = {
         id: this.cont.toString(), // Convertir a string y usar ':'
         name: formValue.name,
@@ -46,23 +46,22 @@ export class CreationPage {
         salePrice: formValue.isForSale ? formValue.salePrice : 0,
         isForRent: formValue.isForRent,
         rentPrice: formValue.isForRent ? formValue.rentPrice : 0,
-        picture: formValue.picture || ''
+        picture: formValue.picture || '',
       };
 
       console.log('Nueva casa:', newHouse);
-      
+
       this.houseService.createHouse(newHouse).subscribe({
         next: (createdHouse) => {
           console.log('Casa creada exitosamente:', createdHouse);
           this.cont++; // Incrementar contador para siguiente casa
           this.router.navigate(['/home']);
-          this.cont+1;
+          this.cont + 1;
         },
         error: (error) => {
           console.error('Error al crear la casa:', error);
-        }
+        },
       });
-
     } else {
       console.log('Formulario inválido');
       this.markFormGroupTouched();
@@ -74,12 +73,12 @@ export class CreationPage {
   }
 
   private markFormGroupTouched() {
-    Object.keys(this.houseForm.controls).forEach(key => {
+    Object.keys(this.houseForm.controls).forEach((key) => {
       const control = this.houseForm.get(key);
       control?.markAsTouched();
-      
+
       if (control instanceof FormGroup) {
-        Object.keys(control.controls).forEach(nestedKey => {
+        Object.keys(control.controls).forEach((nestedKey) => {
           control.get(nestedKey)?.markAsTouched();
         });
       }

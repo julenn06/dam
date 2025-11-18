@@ -5,7 +5,8 @@
   font-family: Arial, sans-serif;
 }
 
-h2, h3 {
+h2,
+h3 {
   color: #333;
 }
 
@@ -24,7 +25,8 @@ section {
   max-width: 400px;
 }
 
-input, select {
+input,
+select {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -103,7 +105,8 @@ button {
   color: #666;
 }
 
-.libro-genero, .libro-ano {
+.libro-genero,
+.libro-ano {
   font-size: 14px;
   color: #888;
 }

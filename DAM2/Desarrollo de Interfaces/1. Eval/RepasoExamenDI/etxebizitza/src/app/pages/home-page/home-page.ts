@@ -12,7 +12,6 @@ import { FormsModule } from '@angular/forms'; // Agregar para ngModel
   styleUrl: './home-page.css',
 })
 export class HomePage implements OnInit {
-
   houses: House[] = [];
   selling: House[] = [];
   selectedHouseType: HouseTypes | 'ALL' = 'ALL'; // Corregir nombre de variable
@@ -22,7 +21,7 @@ export class HomePage implements OnInit {
 
   constructor(
     private houseRemoteService: HouseRemoteService,
-    private router: Router
+    private router: Router,
   ) {}
 
   ngOnInit() {
@@ -30,11 +29,11 @@ export class HomePage implements OnInit {
     this.houseRemoteService.getSellingHouses().subscribe({
       next: (sellingData) => {
         this.selling = sellingData;
-        console.log("Houses selling received:", sellingData);
-      }, 
+        console.log('Houses selling received:', sellingData);
+      },
       error: (error) => {
         console.error('Error fetching selling houses', error);
-      }
+      },
     }); // Cambiar : por ;
   }
 
@@ -46,7 +45,7 @@ export class HomePage implements OnInit {
       },
       error: (error) => {
         console.error('Error fetching houses:', error);
-      }
+      },
     });
   }
 
@@ -60,7 +59,7 @@ export class HomePage implements OnInit {
         },
         error: (error) => {
           console.error('Error loading houses by type:', error);
-        }
+        },
       });
     }
   }
@@ -75,7 +74,7 @@ export class HomePage implements OnInit {
         },
         error: (error) => {
           console.error('Error al eliminar la casa:', error);
-        }
+        },
       });
     }
   }
@@ -88,28 +87,27 @@ export class HomePage implements OnInit {
       },
       error: (error) => {
         console.error('Error al actualizar la casa:', error);
-      }
+      },
     });
   }
-  
+
   private loadHouses() {
     // Recargar todas las casas
     this.houseRemoteService.getHouses().subscribe({
       next: (data) => {
         this.houses = data;
-      }
+      },
     });
 
     // Recargar casas en venta
     this.houseRemoteService.getSellingHouses().subscribe({
       next: (sellingData) => {
         this.selling = sellingData;
-      }
+      },
     });
   }
 
   goToHouseDetails(id: string) {
     this.router.navigate(['/house', id]);
   }
-
-} 
+}

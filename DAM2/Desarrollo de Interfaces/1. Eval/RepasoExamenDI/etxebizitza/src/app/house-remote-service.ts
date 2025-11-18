@@ -7,37 +7,56 @@ import { House, HouseTypes } from '../app/house';
   providedIn: 'root',
 })
 export class HouseRemoteService {
-  
   private http = inject(HttpClient);
   private apiUrl = 'http://localhost:3000/property';
 
   getHouses(): Observable<House[]> {
-    return this.http.get<House[]>(this.apiUrl)
+    return this.http.get<House[]>(this.apiUrl);
   }
 
   getSellingHouses(): Observable<House[]> {
-    return this.http.get<House[]>(this.apiUrl).pipe(
-      map(houses => houses.filter(house => house.isForSale))
-    );
+    return this.http
+      .get<House[]>(this.apiUrl)
+      .pipe(map((houses) => houses.filter((house) => house.isForSale)));
   }
 
   getRentingHouses(): Observable<House[]> {
-    return this.http.get<House[]>(this.apiUrl).pipe(
-      map(houses => houses.filter(house => house.isForRent))
-    );
+    return this.http
+      .get<House[]>(this.apiUrl)
+      .pipe(map((houses) => houses.filter((house) => house.isForRent)));
   }
 
-  createHouse(house: House): Observable<House>{
-    const data = {id: `${house.id}`, name: house.name, location: house.location, propertyType: house.propertyType, isForSale: house.isForSale, salePrice: house.salePrice || "0", isForRent: house.isForRent, rentPrice: house.rentPrice || "0", picture: house.picture}
-    return this.http.post<House>(this.apiUrl, data)
+  createHouse(house: House): Observable<House> {
+    const data = {
+      id: `${house.id}`,
+      name: house.name,
+      location: house.location,
+      propertyType: house.propertyType,
+      isForSale: house.isForSale,
+      salePrice: house.salePrice || '0',
+      isForRent: house.isForRent,
+      rentPrice: house.rentPrice || '0',
+      picture: house.picture,
+    };
+    return this.http.post<House>(this.apiUrl, data);
   }
 
   deleteHouse(id: string): Observable<any> {
-      return this.http.delete(`${this.apiUrl}/${id}`);
+    return this.http.delete(`${this.apiUrl}/${id}`);
   }
 
   updateHouse(house: House): Observable<House> {
-    const data = {id: `${house.id}`, name: house.name, location: house.location, propertyType: house.propertyType, isForSale: house.isForSale, salePrice: house.salePrice || "0", isForRent: house.isForRent, rentPrice: house.rentPrice || "0", picture: house.picture}
+    const data = {
+      id: `${house.id}`,
+      name: house.name,
+      location: house.location,
+      propertyType: house.propertyType,
+      isForSale: house.isForSale,
+      salePrice: house.salePrice || '0',
+      isForRent: house.isForRent,
+      rentPrice: house.rentPrice || '0',
+      picture: house.picture,
+    };
     return this.http.put<House>(`${this.apiUrl}/${house.id}`, data);
   }
 
@@ -47,23 +66,23 @@ export class HouseRemoteService {
   }
 
   getHousesByType(type: HouseTypes): Observable<House[]> {
-    return this.http.get<House[]>(this.apiUrl).pipe(
-      map(houses => houses.filter(house => house.propertyType === type))
-    );
+    return this.http
+      .get<House[]>(this.apiUrl)
+      .pipe(map((houses) => houses.filter((house) => house.propertyType === type)));
   }
 
   getHousesPriceOver100k(): Observable<House[]> {
-    return this.http.get<House[]>(this.apiUrl).pipe(
-      map(houses => houses.filter(houses => houses.salePrice > 100000 ))
-    );
+    return this.http
+      .get<House[]>(this.apiUrl)
+      .pipe(map((houses) => houses.filter((houses) => houses.salePrice > 100000)));
   }
 
   getNextId(): Observable<number> {
     return this.http.get<House[]>(this.apiUrl).pipe(
-      map(houses => {
-        const ids = houses.map(house => parseInt(house.id, 10));
+      map((houses) => {
+        const ids = houses.map((house) => parseInt(house.id, 10));
         return Math.max(...ids) + 1;
-      })
+      }),
     );
   }
 
@@ -109,5 +128,4 @@ private createHouseWithData(house: House): Observable<House> {
   };
   return this.http.post<House>(this.apiUrl, data);
 }*/
-
 }

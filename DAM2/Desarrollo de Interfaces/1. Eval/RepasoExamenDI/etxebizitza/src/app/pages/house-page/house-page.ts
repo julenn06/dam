@@ -5,13 +5,12 @@ import { HouseRemoteService } from '../../house-remote-service';
 import { House } from '../../house';
 import { FormsModule } from '@angular/forms';
 
-
 @Component({
   selector: 'app-house-detail',
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './house-page.html',
-  styleUrls: ['./house-page.css']
+  styleUrls: ['./house-page.css'],
 })
 export class HouseDetailComponent implements OnInit {
   house!: House;
@@ -20,7 +19,7 @@ export class HouseDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private houseService: HouseRemoteService
+    private houseService: HouseRemoteService,
   ) {}
 
   ngOnInit() {
@@ -37,7 +36,7 @@ export class HouseDetailComponent implements OnInit {
       },
       error: (err) => {
         console.error('Error loading house:', err);
-      }
+      },
     });
   }
 
@@ -45,10 +44,15 @@ export class HouseDetailComponent implements OnInit {
     this.router.navigate(['/home']);
   }
 
-    updateHouse(house: House) {
+  updateHouse(house: House) {
     if (this.house) {
       // Validar que los datos obligatorios estén presentes
-      if (!this.house.name || !this.house.propertyType || !this.house.location.city || !this.house.location.address) {
+      if (
+        !this.house.name ||
+        !this.house.propertyType ||
+        !this.house.location.city ||
+        !this.house.location.address
+      ) {
         alert('Por favor, completa todos los campos obligatorios');
         return;
       }
@@ -74,7 +78,7 @@ export class HouseDetailComponent implements OnInit {
         error: (error) => {
           console.error('Error al actualizar la casa:', error);
           alert('Error al actualizar la casa');
-        }
+        },
       });
     }
   }

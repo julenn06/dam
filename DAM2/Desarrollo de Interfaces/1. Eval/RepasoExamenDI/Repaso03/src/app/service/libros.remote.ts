@@ -7,7 +7,6 @@ import { map, Observable, switchMap, take } from 'rxjs';
   providedIn: 'root',
 })
 export class LibrosRemoteService {
-
   private http = inject(HttpClient);
   private apiUrl = 'http://localhost:3000/Libros';
 
@@ -20,27 +19,29 @@ export class LibrosRemoteService {
   }
 
   getLibroByTitulo(titulo: string): Observable<Libro> {
-    return this.http.get<Libro[]>(`${this.apiUrl}?titulo=${encodeURIComponent(titulo)}`).pipe(
-      map(libros => libros[0])
-    );
+    return this.http
+      .get<Libro[]>(`${this.apiUrl}?titulo=${encodeURIComponent(titulo)}`)
+      .pipe(map((libros) => libros[0]));
   }
 
   getLibrosByAutor(autor: string): Observable<Libro[]> {
-    return this.http.get<Libro[]>(this.apiUrl).pipe(
-      map(libros => libros.filter(l => l.autor.toLowerCase().includes(autor.toLowerCase())))
-    );
+    return this.http
+      .get<Libro[]>(this.apiUrl)
+      .pipe(
+        map((libros) => libros.filter((l) => l.autor.toLowerCase().includes(autor.toLowerCase()))),
+      );
   }
 
   getLibrosByGenero(genero: string): Observable<Libro[]> {
-    return this.http.get<Libro[]>(this.apiUrl).pipe(
-      map(libros => libros.filter(l => l.genero.toLowerCase() === genero.toLowerCase()))
-    );
+    return this.http
+      .get<Libro[]>(this.apiUrl)
+      .pipe(map((libros) => libros.filter((l) => l.genero.toLowerCase() === genero.toLowerCase())));
   }
 
   getLibrosByAnoGreaterThan(ano: number): Observable<Libro[]> {
-    return this.http.get<Libro[]>(this.apiUrl).pipe(
-      map(libros => libros.filter(l => Number(l.ano) > ano))
-    );
+    return this.http
+      .get<Libro[]>(this.apiUrl)
+      .pipe(map((libros) => libros.filter((l) => Number(l.ano) > ano)));
   }
 
   createLibro(titulo: string, autor: string, genero: string, ano: number): Observable<Libro> {
@@ -58,10 +59,10 @@ export class LibrosRemoteService {
           titulo: titulo,
           autor: autor,
           genero: genero,
-          ano: ano
+          ano: ano,
         };
         return this.http.post<Libro>(this.apiUrl, body);
-      })
+      }),
     );
   }
 
@@ -75,15 +76,15 @@ export class LibrosRemoteService {
 
   deleteLibroByTitulo(titulo: string): Observable<void> {
     return this.getLibroByTitulo(titulo).pipe(
-      switchMap(libro => {
+      switchMap((libro) => {
         return this.deleteLibro(Number(libro.id));
-      })
+      }),
     );
   }
 
   getLibrosByAnoPar(): Observable<Libro[]> {
-    return this.http.get<Libro[]>(this.apiUrl).pipe(
-      map(libros => libros.filter(l => Number(l.ano) % 2 === 0))
-    );
+    return this.http
+      .get<Libro[]>(this.apiUrl)
+      .pipe(map((libros) => libros.filter((l) => Number(l.ano) % 2 === 0)));
   }
 }
