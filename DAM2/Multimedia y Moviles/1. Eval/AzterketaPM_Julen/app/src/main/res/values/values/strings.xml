@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">1EbalAzterketaApp</string>
-    <string name="ordenActual">Orden actual:</string>
-    <string name="orden">XXXXXXX</string>
-    <string name="listadoTitle">Listado de libros:</string>
-    <string name="detalleTitle">Detalle de libros:</string>
-
-
-</resources>
