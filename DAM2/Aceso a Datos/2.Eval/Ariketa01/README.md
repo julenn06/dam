@@ -43,7 +43,7 @@ El código está escrito en euskera para mostrar la internacionalización, pero 
 2. Crea una nueva base de datos llamada `ariketa01julenad` (collation: utf8_general_ci).
 
 ### Paso 3: Ejecutar las sentencias SQL
-Copia y pega las sentencias del archivo `consultas.txt`[consultas.txt](consultas.txt) en la pestaña SQL de phpMyAdmin (selecciona la BD `ariketa01julenad`):
+Copia y pega las sentencias del archivo [consultas.txt](consultas.txt) en la pestaña SQL de phpMyAdmin (selecciona la BD `ariketa01julenad`):
 - `CREATE TABLE` para crear las tablas.
 - `INSERT` para añadir datos de ejemplo.
 - `CREATE PROCEDURE` para los procedimientos almacenados.
@@ -123,7 +123,7 @@ Departamento MARKETING y empleados eliminados.
 ## Estructura de archivos
 
 - `src/main/Main.java`: Código fuente del programa.
-- `consultas.txt`: Todas las sentencias SQL.
+- [consultas.txt](consultas.txt): Todas las sentencias SQL.
 - `pom.xml`: Configuración de Maven con dependencias.
 - `README.md`: Esta guía.
 - `.vscode/settings.json`: Configuración opcional para VS Code.
@@ -133,7 +133,7 @@ Departamento MARKETING y empleados eliminados.
 - **Error de conexión**: Verifica que XAMPP esté ejecutando MySQL en puerto 3307.
 - **Driver no encontrado**: Asegúrate de que Maven descargó el conector (`mvn dependency:tree`).
 - **Errores SQL**: Comprueba que los procedimientos estén creados en phpMyAdmin.
-- **Datos vacíos**: Ejecuta los INSERT de `consultas.txt`.
+- **Datos vacíos**: Ejecuta los INSERT de [consultas.txt](consultas.txt).
 
 ## Licencia
 
