@@ -590,7 +590,3 @@ Este repositorio representa una compilación exhaustiva de todo el trabajo reali
 ## 📝 Licencia
 
 Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
-
----
-
-⭐ Si este repositorio te ha sido útil, ¡no dudes en darle una estrella!
