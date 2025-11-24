@@ -126,7 +126,6 @@ Departamento MARKETING y empleados eliminados.
 - [consultas.txt](consultas.txt): Todas las sentencias SQL.
 - `pom.xml`: Configuración de Maven con dependencias.
 - `README.md`: Esta guía.
-- `.vscode/settings.json`: Configuración opcional para VS Code.
 
 ## Solución de problemas
 
