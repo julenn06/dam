@@ -391,6 +391,33 @@ Este repositorio representa una compilación exhaustiva de todo el trabajo reali
   - Service mesh
   - Kubernetes intro
 
+#### Sistemas Informáticos 🖥️
+- **Sistemas Operativos**
+  - Administración de Windows Server
+  - Linux básico y avanzado
+  - Scripts de automatización (Bash, PowerShell)
+  - Gestión de servicios y procesos
+- **Redes y Comunicaciones**
+  - Configuración de redes TCP/IP
+  - Protocolos de red
+  - Seguridad de red
+  - VPN y firewalls
+- **Virtualización y Cloud**
+  - VMware y VirtualBox
+  - Introducción a Docker
+  - Servicios en la nube
+  - Backup y recuperación
+- **Hardware y Mantenimiento**
+  - Componentes de hardware
+  - Diagnóstico y reparación
+  - Optimización de sistemas
+  - Monitoreo de rendimiento
+- **Seguridad Informática**
+  - Antivirus y antimalware
+  - Políticas de seguridad
+  - Encriptación de datos
+  - Auditoría y compliance
+
 ## 🛠 Tecnologías Principales
 
 ### Lenguajes de Programación 📝
