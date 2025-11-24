@@ -5,12 +5,12 @@ Esta carpeta contiene todo el material relacionado con el módulo de **Base de D
 ## 📂 Contenido Principal
 
 ### 🐬 MySQL
-- [**2.Eval/**](2.Eval/): Evaluación 2
+- **2.Eval/**: Evaluación 2
   - 📄 Archivos SQL con consultas básicas y avanzadas (SELECT, JOIN, subconsultas, funciones agregadas).
   - 📝 Ejercicios de exámenes y repaso.
   - 🗃️ Bases de datos de ejemplo como `db_empresa`, `HR`, `db_mundua`.
   - 🚀 Proyectos y erronka (desafíos).
-- [**3.Eval/**](3.Eval/): Evaluación 3
+- **3.Eval/**: Evaluación 3
   - ⚙️ Temas avanzados: Procedimientos almacenados, funciones, triggers, cursores, excepciones.
   - 💡 Ejemplos y ejercicios prácticos en carpetas como `Prozedurak eta Funtzioak/`, `Trigger/`, `Kurtsoreak/`.
   - 🧪 Bases de datos para pruebas y exámenes.
