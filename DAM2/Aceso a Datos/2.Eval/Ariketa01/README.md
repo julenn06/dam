@@ -43,7 +43,7 @@ El código está escrito en euskera para mostrar la internacionalización, pero 
 2. Crea una nueva base de datos llamada `ariketa01julenad` (collation: utf8_general_ci).
 
 ### Paso 3: Ejecutar las sentencias SQL
-Copia y pega las sentencias del archivo `consultas.txt` en la pestaña SQL de phpMyAdmin (selecciona la BD `ariketa01julenad`):
+Copia y pega las sentencias del archivo `consultas.txt`[consultas.txt](consultas.txt) en la pestaña SQL de phpMyAdmin (selecciona la BD `ariketa01julenad`):
 - `CREATE TABLE` para crear las tablas.
 - `INSERT` para añadir datos de ejemplo.
 - `CREATE PROCEDURE` para los procedimientos almacenados.
