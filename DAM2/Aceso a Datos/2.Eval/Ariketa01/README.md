@@ -4,8 +4,6 @@
 
 Este proyecto es un ejercicio práctico de acceso a datos en Java, utilizando una base de datos MySQL. Se conecta a una base de datos llamada `ariketa01julenad` y realiza operaciones CRUD (Crear, Leer, Actualizar, Eliminar) en las tablas `DEPARTAMENTOS` y `EMPLEADOS`. El programa demuestra el uso de diferentes tipos de sentencias JDBC: `Statement` para consultas simples, `PreparedStatement` para consultas parametrizadas y `CallableStatement` para llamar a procedimientos almacenados.
 
-El código está escrito en euskera para mostrar la internacionalización, pero la documentación está en castellano. Es ideal para estudiantes de DAM (Desarrollo de Aplicaciones Multiplataforma) que aprenden a integrar Java con bases de datos.
-
 ## Características
 
 ### Consultas
