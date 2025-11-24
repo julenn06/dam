@@ -122,7 +122,7 @@ Departamento MARKETING y empleados eliminados.
 
 ## Estructura de archivos
 
-- `src/main/Main.java`: Código fuente del programa.
+- `src/main/Main.java`[Main](src/main/Main.java): Código fuente del programa.
 - [consultas.txt](consultas.txt): Todas las sentencias SQL.
 - `pom.xml`: Configuración de Maven con dependencias.
 - `README.md`: Esta guía.
