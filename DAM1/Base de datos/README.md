@@ -4,7 +4,6 @@ Esta carpeta contiene todo el material relacionado con el módulo de **Base de D
 
 ## 📂 Contenido Principal
 
-### 🐬 MySQL
 - **2.Eval/**: Evaluación 2
   - 📄 Archivos SQL con consultas básicas y avanzadas (SELECT, JOIN, subconsultas, funciones agregadas).
   - 📝 Ejercicios de exámenes y repaso.
