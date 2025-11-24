@@ -45,7 +45,7 @@ Este repositorio representa una compilación exhaustiva de todo el trabajo reali
 
 ### 📚 [DAM1](DAM1) (Primer Curso)
 
-#### [Base de datos](DAM1/Base%20de%20datos/) 📊
+#### [Base de datos](DAM1/Base%20de%20datos/README.md) 📊
 - **MySQL**
   - **Fundamentos SQL**
     - SELECT, INSERT, UPDATE, DELETE
@@ -68,7 +68,7 @@ Este repositorio representa una compilación exhaustiva de todo el trabajo reali
     - Control de usuarios
     - Reporting y análisis
 
-#### [Entornos de Desarrollo](DAM1/Entornos%20de%20Desarrollo/) 🛠️
+#### [Entornos de Desarrollo](DAM1/Entornos%20de%20Desarrollo/README.md) 🛠️
 - **Metodologías de Desarrollo**
   - Scrum y Agile
   - Kanban
@@ -99,7 +99,7 @@ Este repositorio representa una compilación exhaustiva de todo el trabajo reali
   - Gestión de riesgos
   - Métricas de calidad
 
-#### [Lenguaje de Marcas](DAM1/Lenguaje%20de%20Marcas/) 🌐
+#### [Lenguaje de Marcas](DAM1/Lenguaje%20de%20Marcas/README.md) 🌐
 - **HTML5 Avanzado**
   - Semántica HTML5
   - APIs del navegador
@@ -143,7 +143,7 @@ Este repositorio representa una compilación exhaustiva de todo el trabajo reali
   - Webpack basics
   - Git integration
 
-#### [Programación](DAM1/Programacion/) 💻
+#### [Programación](DAM1/Programacion/README.md) 💻
 - **Fundamentos de Java**
   - Tipos de datos y variables
   - Control de flujo
@@ -193,7 +193,7 @@ Este repositorio representa una compilación exhaustiva de todo el trabajo reali
 
 ### 🚀 [DAM2](DAM2) (Segundo Curso)
 
-#### [Acceso a Datos](DAM2/Aceso%20a%20Datos/) 📂
+#### [Acceso a Datos](DAM2/Aceso%20a%20Datos/README.md) 📂
 - **Manipulación XML**
   - DOM parsing
   - SAX parsing
@@ -229,7 +229,7 @@ Este repositorio representa una compilación exhaustiva de todo el trabajo reali
   - JWT authentication
   - API documentation
 
-#### [Desarrollo de Interfaces](DAM2/Desarrollo%20de%20Interfaces/) 🎨
+#### [Desarrollo de Interfaces](DAM2/Desarrollo%20de%20Interfaces/README.md) 🎨
 - **Angular Avanzado**
   - Componentes y servicios
   - Routing y navegación
@@ -268,7 +268,7 @@ Este repositorio representa una compilación exhaustiva de todo el trabajo reali
   - PWA features
   - SEO optimization
 
-#### [LINQ & .NET](DAM2/LINQ/) 🔷
+#### [LINQ & .NET](DAM2/LINQ/README.md) 🔷
 - **C# Avanzado**
   - Generics
   - Delegates y eventos
@@ -309,7 +309,7 @@ Este repositorio representa una compilación exhaustiva de todo el trabajo reali
   - Response caching
   - API testing
 
-#### [Multimedia y Móviles](DAM2/Multimedia%20y%20Moviles/) 📱
+#### [Multimedia y Móviles](DAM2/Multimedia%20y%20Moviles/README.md) 📱
 - **Desarrollo Android**
   - Activities y Fragments
   - Lifecycle management
@@ -350,7 +350,7 @@ Este repositorio representa una compilación exhaustiva de todo el trabajo reali
   - Firebase integration
   - App publishing
 
-#### [Procesos y Servicios](DAM2/Procesos%20y%20Servicios/) 🔄
+#### [Procesos y Servicios](DAM2/Procesos%20y%20Servicios/README.md) 🔄
 - **Programación Multiproceso**
   - Threads y procesos
   - Sincronización
@@ -391,7 +391,7 @@ Este repositorio representa una compilación exhaustiva de todo el trabajo reali
   - Service mesh
   - Kubernetes intro
 
-#### [Sistemas Informáticos](DAM2/Sistemas%20Informaticos/) 🖥️
+#### [Sistemas Informáticos](DAM2/Sistemas%20Informaticos/README.md) 🖥️
 - **Sistemas Operativos**
   - Administración de Windows Server
   - Linux básico y avanzado
