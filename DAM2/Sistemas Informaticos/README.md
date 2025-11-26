@@ -11,6 +11,7 @@ Esta carpeta contiene el módulo de **Sistemas Informáticos** del segundo curso
 
 ### 2. Eval/
 - 📝 **Ariketa01/**: Ejercicio 1.
+- 📝 **Ariketa02/**: Ejercicio 2.
 
 ## 🛠️ Tecnologías
 - 🪟 **Sistemas Operativos**: Windows Server, Linux, scripts (Bash, PowerShell).

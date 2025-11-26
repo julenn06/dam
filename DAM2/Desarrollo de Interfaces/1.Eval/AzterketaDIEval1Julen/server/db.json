@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "id": "p2",
+      "name": "Pantalón",
+      "price": 30,
+      "stock": 25
+    },
+    {
+      "id": "p3",
+      "name": "Zapatillas",
+      "price": 60,
+      "stock": 10
+    },
+    {
+      "id": "p4",
+      "name": "Gorra",
+      "price": 10,
+      "stock": 100
+    },
+    {
+      "id": "p5",
+      "name": "Chaqueta",
+      "price": 80,
+      "stock": 5
+    },
+    {
+      "id": "1",
+      "name": "fgdfgdfg",
+      "price": 5657,
+      "stock": 89789789
+    },
+    {
+      "id": "2",
+      "name": "fsdfsdfsdf",
+      "price": 0,
+      "stock": 0
+    }
+  ]
+}
