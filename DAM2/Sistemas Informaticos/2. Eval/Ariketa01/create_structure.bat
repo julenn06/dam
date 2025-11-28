@@ -1,5 +1,5 @@
 @echo off
-set base=C:\Julen
+set base=C:\cursos\informatica\2024
 
 md "%base%\Sistema\linux"
 md "%base%\Sistema\Windows"
