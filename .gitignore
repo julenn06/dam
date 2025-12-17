@@ -26,6 +26,7 @@ target/
 *.sublime-workspace
 
 # Visual Studio Code
+.vs/*
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -36,6 +37,7 @@ target/
 # Misceláneos
 .angular/cache/
 .sass-cache/
+*.cache
 connect.lock
 coverage/
 libpeerconnection.log
