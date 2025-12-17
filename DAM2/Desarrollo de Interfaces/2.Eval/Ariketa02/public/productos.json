@@ -1,0 +1,76 @@
+{
+  "productos": [
+    {
+      "id": "1",
+      "nombre": "Laptop HP Pavilion 15",
+      "descripcion": "Laptop gaming con procesador Intel i7, 16GB RAM, 512GB SSD, tarjeta gráfica RTX 3060",
+      "precio": 1299.99,
+      "categoria": "Electrónica",
+      "stock": 15,
+      "imagen": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
+      "disponible": true,
+      "fechaCreacion": "2024-01-15",
+      "descuento": 10
+    },
+    {
+      "id": "2",
+      "nombre": "Smartphone Samsung Galaxy S24",
+      "descripcion": "Teléfono inteligente con pantalla AMOLED 6.2, cámara de 108MP, 5G, 256GB almacenamiento",
+      "precio": 899.50,
+      "categoria": "Electrónica",
+      "stock": 30,
+      "imagen": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
+      "disponible": true,
+      "fechaCreacion": "2024-02-20",
+      "descuento": 5
+    },
+    {
+      "id": "3",
+      "nombre": "Auriculares Sony WH-1000XM5",
+      "descripcion": "Auriculares inalámbricos con cancelación de ruido activa, 30 horas de batería, Bluetooth 5.2",
+      "precio": 349.99,
+      "categoria": "Electrónica",
+      "stock": 50,
+      "imagen": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+      "disponible": true,
+      "fechaCreacion": "2024-03-10",
+      "descuento": 15
+    },
+    {
+      "id": "4",
+      "nombre": "Zapatillas Nike Air Max 2024",
+      "descripcion": "Zapatillas deportivas con tecnología Air, suela de goma, diseño ergonómico para running",
+      "precio": 159.99,
+      "categoria": "Deportes",
+      "stock": 75,
+      "imagen": "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
+      "disponible": true,
+      "fechaCreacion": "2024-04-05",
+      "descuento": 20
+    },
+    {
+      "id": "5",
+      "nombre": "Cafetera Nespresso Vertuo",
+      "descripcion": "Cafetera de cápsulas con tecnología Centrifusion, 5 tamaños de café, deposito de 1.1L",
+      "precio": 179.00,
+      "categoria": "Hogar",
+      "stock": 0,
+      "imagen": "https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6",
+      "disponible": false,
+      "fechaCreacion": "2024-01-25",
+      "descuento": 0
+    },
+    {
+      "id": "6",
+      "nombre": "Libro: Clean Code - Robert Martin",
+      "descripcion": "Manual de estilo para el desarrollo ágil de software, técnicas de programación limpia",
+      "precio": 45.50,
+      "categoria": "Libros",
+      "stock": 120,
+      "imagen": "https://images.unsplash.com/photo-1544947950-fa07a98d237f",
+      "disponible": true,
+      "fechaCreacion": "2024-05-12",
+      "descuento": 0
+    }
+  ]
+}

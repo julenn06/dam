@@ -24,7 +24,7 @@ public class Main {
 		try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD)) {
 
 			System.out.println("╔════════════════════════════════════════════════════════════════╗");
-			System.out.println("║   CONEXIÓN ESTABLECIDA A LA BASE DE DATOS, CHUMACHO 🚀       ║");
+			System.out.println("║   CONEXIÓN ESTABLECIDA A LA BASE DE DATOS       ║");
 			System.out.println("╚════════════════════════════════════════════════════════════════╝\n");
 
 			// Crear tabla y procedimiento almacenado
