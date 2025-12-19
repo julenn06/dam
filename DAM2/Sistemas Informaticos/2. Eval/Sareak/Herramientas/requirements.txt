@@ -1,0 +1,24 @@
+# Requisitos de Python para la colección de herramientas
+
+# PDF Tools
+PyPDF2>=3.0.0
+pdf2image>=1.16.0
+
+# Image Tools
+Pillow>=10.0.0
+
+# Web & Network Tools
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+
+# System Tools
+psutil>=5.9.0
+
+# Security Tools
+cryptography>=41.0.0
+
+# Data Conversion
+PyYAML>=6.0
+
+# Database Tools (opcionales)
+# psycopg2-binary>=2.9.0  # Para PostgreSQL
