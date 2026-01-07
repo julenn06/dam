@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="header">
+    <h1>📋 Gestor de Tareas</h1>
+    <a routerLink="/nueva" class="btn-nueva">+ Nueva Tarea</a>
+  </div>
+
+  <div class="filtros">
+    <button 
+      [class.activo]="filtroActual === 'todas'"
+      (click)="cambiarFiltro('todas')">
+      Todas ({{ tareas.length }})
+    </button>
+    <button 
+      [class.activo]="filtroActual === 'pendientes'"
+      (click)="cambiarFiltro('pendientes')">
+      Pendientes ({{ tareasPendientes }})
+    </button>
+    <button 
+      [class.activo]="filtroActual === 'completadas'"
+      (click)="cambiarFiltro('completadas')">
+      Completadas ({{ tareasCompletadas }})
+    </button>
+  </div>
+
+  <div class="tareas-grid">
+    <div *ngFor="let tarea of tareasFiltradas" class="tarea-card" [class.completada]="tarea.completada">
+      <div class="tarea-header">
+        <div class="titulo-container">
+          <input 
+            type="checkbox" 
+            [checked]="tarea.completada"
+            (change)="toggleCompletada(tarea.id)"
+            class="checkbox">
+          <h3 [class.tachado]="tarea.completada">{{ tarea.titulo }}</h3>
+        </div>
+        <span class="prioridad" [ngClass]="getPrioridadClass(tarea.prioridad)">
+          {{ tarea.prioridad }}
+        </span>
+      </div>
+
+      <p class="descripcion">{{ tarea.descripcion }}</p>
+      
+      <div class="fecha">
+        📅 {{ tarea.fechaCreacion }}
+      </div>
+
+      <div class="acciones">
+        <a [routerLink]="['/editar', tarea.id]" class="btn-editar">✏️ Editar</a>
+        <button (click)="eliminarTarea(tarea.id)" class="btn-eliminar">🗑️ Eliminar</button>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="tareasFiltradas.length === 0" class="sin-tareas">
+    <p>No hay tareas {{ filtroActual === 'todas' ? '' : filtroActual }}</p>
+  </div>
+</div>

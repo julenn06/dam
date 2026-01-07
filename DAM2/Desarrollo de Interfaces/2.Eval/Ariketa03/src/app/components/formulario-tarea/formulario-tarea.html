@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="form-card">
+    <h1>{{ esEdicion ? '✏️ Editar Tarea' : '➕ Nueva Tarea' }}</h1>
+    
+    <form [formGroup]="tareaForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="titulo">Título *</label>
+        <input
+          type="text"
+          id="titulo"
+          formControlName="titulo"
+          placeholder="Ej: Completar el proyecto Angular"
+          [class.error]="esInvalido('titulo')">
+        <span class="mensaje-error" *ngIf="esInvalido('titulo')">
+          {{ obtenerMensajeError('titulo') }}
+        </span>
+      </div>
+
+      <div class="form-group">
+        <label for="descripcion">Descripción *</label>
+        <textarea
+          id="descripcion"
+          formControlName="descripcion"
+          rows="4"
+          placeholder="Describe la tarea en detalle..."
+          [class.error]="esInvalido('descripcion')"></textarea>
+        <span class="mensaje-error" *ngIf="esInvalido('descripcion')">
+          {{ obtenerMensajeError('descripcion') }}
+        </span>
+      </div>
+
+      <div class="form-group">
+        <label for="prioridad">Prioridad *</label>
+        <select id="prioridad" formControlName="prioridad">
+          <option value="baja">🟢 Baja</option>
+          <option value="media">🟡 Media</option>
+          <option value="alta">🔴 Alta</option>
+        </select>
+      </div>
+
+      <div class="form-group checkbox-group" *ngIf="esEdicion">
+        <label>
+          <input type="checkbox" formControlName="completada">
+          <span>Marcar como completada</span>
+        </label>
+      </div>
+
+      <div class="form-actions">
+        <button type="button" (click)="cancelar()" class="btn-cancelar">
+          Cancelar
+        </button>
+        <button type="submit" class="btn-guardar" [disabled]="!tareaForm.valid">
+          {{ esEdicion ? 'Actualizar' : 'Crear' }} Tarea
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
