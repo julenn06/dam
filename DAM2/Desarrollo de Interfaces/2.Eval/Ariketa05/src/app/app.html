@@ -1,0 +1,28 @@
+<div class="container">
+  <h1>Angular Guard Demoa</h1>
+
+  <div class="auth-buttons">
+    <button (click)="login()" class="btn btn-success">Login</button>
+    <button (click)="logout()" class="btn btn-danger">Logout</button>
+  </div>
+  
+  <p class="status">
+    Egoera: <strong [class.logged-in]="authService.isAuthenticated()" 
+                     [class.logged-out]="!authService.isAuthenticated()">
+      {{ authService.isAuthenticated() ? 'Logeatuta' : 'Ez dago logeatuta' }}
+    </strong>
+  </p>
+
+  <hr>
+
+  <nav class="navigation">
+    <a routerLink="/home" class="nav-link">Joan Home-ra (Publikoa)</a>
+    <a routerLink="/private" class="nav-link">Joan orri pribatura (Babestuta)</a>
+  </nav>
+
+  <hr>
+
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
