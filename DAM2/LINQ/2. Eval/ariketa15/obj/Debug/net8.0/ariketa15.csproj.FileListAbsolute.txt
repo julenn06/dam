@@ -1,0 +1,15 @@
+C:\Users\in2dm3-d.ELORRIETA\Desktop\DAM\DAM2\LINQ\2. Eval\ariketa15\bin\Debug\net8.0\ariketa15.exe
+C:\Users\in2dm3-d.ELORRIETA\Desktop\DAM\DAM2\LINQ\2. Eval\ariketa15\bin\Debug\net8.0\ariketa15.deps.json
+C:\Users\in2dm3-d.ELORRIETA\Desktop\DAM\DAM2\LINQ\2. Eval\ariketa15\bin\Debug\net8.0\ariketa15.runtimeconfig.json
+C:\Users\in2dm3-d.ELORRIETA\Desktop\DAM\DAM2\LINQ\2. Eval\ariketa15\bin\Debug\net8.0\ariketa15.dll
+C:\Users\in2dm3-d.ELORRIETA\Desktop\DAM\DAM2\LINQ\2. Eval\ariketa15\bin\Debug\net8.0\ariketa15.pdb
+C:\Users\in2dm3-d.ELORRIETA\Desktop\DAM\DAM2\LINQ\2. Eval\ariketa15\obj\Debug\net8.0\ariketa15.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\in2dm3-d.ELORRIETA\Desktop\DAM\DAM2\LINQ\2. Eval\ariketa15\obj\Debug\net8.0\ariketa15.AssemblyInfoInputs.cache
+C:\Users\in2dm3-d.ELORRIETA\Desktop\DAM\DAM2\LINQ\2. Eval\ariketa15\obj\Debug\net8.0\ariketa15.AssemblyInfo.cs
+C:\Users\in2dm3-d.ELORRIETA\Desktop\DAM\DAM2\LINQ\2. Eval\ariketa15\obj\Debug\net8.0\ariketa15.csproj.CoreCompileInputs.cache
+C:\Users\in2dm3-d.ELORRIETA\Desktop\DAM\DAM2\LINQ\2. Eval\ariketa15\obj\Debug\net8.0\ariketa15.sourcelink.json
+C:\Users\in2dm3-d.ELORRIETA\Desktop\DAM\DAM2\LINQ\2. Eval\ariketa15\obj\Debug\net8.0\ariketa15.dll
+C:\Users\in2dm3-d.ELORRIETA\Desktop\DAM\DAM2\LINQ\2. Eval\ariketa15\obj\Debug\net8.0\refint\ariketa15.dll
+C:\Users\in2dm3-d.ELORRIETA\Desktop\DAM\DAM2\LINQ\2. Eval\ariketa15\obj\Debug\net8.0\ariketa15.pdb
+C:\Users\in2dm3-d.ELORRIETA\Desktop\DAM\DAM2\LINQ\2. Eval\ariketa15\obj\Debug\net8.0\ariketa15.genruntimeconfig.cache
+C:\Users\in2dm3-d.ELORRIETA\Desktop\DAM\DAM2\LINQ\2. Eval\ariketa15\obj\Debug\net8.0\ref\ariketa15.dll

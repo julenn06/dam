@@ -1,0 +1,146 @@
+﻿@page "/"
+@using System.ComponentModel.DataAnnotations
+@using System.Text.Json.Serialization
+@inject NavigationManager NavigationManager
+@inject HttpClient Http
+
+
+<div class="main-container">
+    <div class="login-card">
+        <img src="img/EEM-Logo-color.svg" alt="Logo de Elorreita Errekamari" class="login-logo" />
+        <h2>Login</h2>
+        <h2>Login</h2>
+        <EditForm Model="@loginModel" OnValidSubmit="HandleValidSubmit">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+            <div class="form-group">
+                <label for="email">Correo:</label>
+                <InputText id="email" class="input" @bind-Value="loginModel.Email" />
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña:</label>
+                <InputText id="password" type="password" class="input" @bind-Value="loginModel.Password" />
+            </div>
+            <button type="submit" class="btn">Login</button>
+        </EditForm>
+        @if (loginMessage != null)
+        {
+            <div class="login-message">@loginMessage</div>
+        }
+    </div>
+</div>
+
+<style>
+    .main-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Cambiado de min-height: 80vh; */
+        background: linear-gradient(135deg, #e0e7ff 0%, #f3f4f6 100%);
+    }
+
+    .login-logo {
+        display: block;
+        margin: 0 auto 1.5rem auto;
+        max-width: 120px;
+        height: auto;
+    }
+
+    .login-card {
+        background: #fff;
+        padding: 2rem 2.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        min-width: 320px;
+        max-width: 360px;
+    }
+
+        .login-card h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #3b82f6;
+        }
+
+    .form-group {
+        margin-bottom: 1.2rem;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 0.4rem;
+        font-weight: 500;
+        color: #374151;
+    }
+
+    .input {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #d1d5db;
+        border-radius: 6px;
+        font-size: 1rem;
+        background: #f9fafb;
+        transition: border-color 0.2s;
+    }
+
+        .input:focus {
+            border-color: #3b82f6;
+            outline: none;
+        }
+
+    .btn {
+        width: 100%;
+        padding: 0.7rem;
+        background: #3b82f6;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+
+        .btn:hover {
+            background: #2563eb;
+        }
+
+    .login-message {
+        margin-top: 1rem;
+        text-align: center;
+        color: #ef4444;
+        font-weight: 500;
+    }
+</style>
+
+@code {
+    private LoginModel loginModel = new();
+    private string loginMessage;
+
+    private async Task HandleValidSubmit()
+    {
+        loginMessage = null;
+        try
+        {
+            var response = await Http.PostAsJsonAsync("http://localhost:8080/login", loginModel);
+            if (response.IsSuccessStatusCode)
+                NavigationManager.NavigateTo("/centerlist");
+            else
+                loginMessage = await response.Content.ReadAsStringAsync();
+        }
+        catch (Exception ex)
+        {
+            loginMessage = $"Error: {ex.Message}";
+        }
+    }
+
+    public class LoginModel
+    {
+        [Required]
+        [EmailAddress]
+        [JsonPropertyName("email")]
+        public string Email { get; set; }
+        [Required]
+        [JsonPropertyName("password")]
+        public string Password { get; set; }
+    }
+}

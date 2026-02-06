@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.elorrieta</groupId>
+    <artifactId>elorserv-bateratua</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>ElorServBateratua</name>
+    <description>Zerbitzari bateratua hezkuntza-ingurunerako - REST API + Socket TCP - DAM/DAW</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <maven.compiler.release>21</maven.compiler.release>
+        <java.version>21</java.version>
+        <spring.boot.version>3.4.2</spring.boot.version>
+        <mysql.version>9.1.0</mysql.version>
+        <gson.version>2.11.0</gson.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <!-- ========================================== -->
+        <!-- SPRING BOOT OINARRIA                       -->
+        <!-- ========================================== -->
+        
+        <!-- Spring Boot Starter - Aplikaziorako oinarria -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <!-- Spring Boot Web - REST APIrako -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- ========================================== -->
+        <!-- DATU-BASEA - JPA/HIBERNATE                 -->
+        <!-- ========================================== -->
+        
+        <!-- Spring Data JPA - ORM Hibernate-rekin -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <!-- MySQL Connector - MySQL JDBC gidaria -->
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- ========================================== -->
+        <!-- JSON PROZESAMENDUA                         -->
+        <!-- ========================================== -->
+        
+        <!-- Jackson - JSON serializazioa -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+
+        <!-- GSON - ikastetxeak.json eta Socket erantzunak prozesatzeko -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+        </dependency>
+
+        <!-- ========================================== -->
+        <!-- ERREGISTROA                                -->
+        <!-- ========================================== -->
+        
+        <!-- SLF4J + Logback (spring-boot-starter-logging-en barne) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
+        </dependency>
+
+        <!-- ========================================== -->
+        <!-- BALIOZKOTZEA                               -->
+        <!-- ========================================== -->
+        
+        <!-- Bean Validation entitateak balidatzeko -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
+        <!-- ========================================== -->
+        <!-- PROBAK                                     -->
+        <!-- ========================================== -->
+        
+        <!-- Spring Boot Test - Unitate eta integrazioko probak -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- ========================================== -->
+            <!-- SPRING BOOT MAVEN PLUGIN                   -->
+            <!-- ========================================== -->
+            
+            <!-- JAR exekutagarri gisa paketatzeko plugin-a -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring.boot.version}</version>
+                <configuration>
+                    <mainClass>com.elorrieta.elorserv.ElorServBateratuaApplication</mainClass>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- ========================================== -->
+            <!-- MAVEN COMPILER PLUGIN                      -->
+            <!-- ========================================== -->
+            
+            <!-- Java 21 konpilatzailea -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version>
+                <configuration>
+                    <source>21</source>
+                    <target>21</target>
+                    <release>21</release>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+
+            <!-- ========================================== -->
+            <!-- MAVEN RESOURCES PLUGIN                     -->
+            <!-- ========================================== -->
+            
+            <!-- Baliabideak prozesatzeko (application.properties, ikastetxeak.json) -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.3.1</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+
+        <resources>
+            <!-- Baliabide guztiak sartu -->
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.json</include>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
+</project>
